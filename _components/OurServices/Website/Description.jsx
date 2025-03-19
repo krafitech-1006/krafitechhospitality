@@ -1,152 +1,83 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import IMAGES from '@/public'
 import Image from 'next/image'
-import { Card, CardBody } from "@nextui-org/react";
-import Link from 'next/link';
-import ContactModal from '@/_components/ContactModal';
-import { ChevronRight } from 'lucide-react';
+import { useRouter } from 'next/navigation'
+import { Button } from '@nextui-org/react'
 
 const Description = () => {
 
-    const [modalClicked, setModalClicked] = useState(false);
+    const router = useRouter();
 
-    const [serviceClicked, setServiceClicked] = useState(false);
+    const cardData = [
+        {
+            id: '66c4779d11f67143ae90ebb8',
+            image: IMAGES.webdesigning,
+            title: "Web Designing",
+            desc: "The design of websites that are displayed on the internet.",
+            route: "web-designing"
+        },
+        {
+            id: '66c4798a11f67143ae90ecc3',
+            image: IMAGES.websitesaudit,
+            title: "Websites Audit",
+            desc: "A website audit is an examination of page performance prior to large-scale search",
+            route: "websites-audit"
+        },
+        {
+            id: '66c4798a11f67143ae90ecc4',
+            image: IMAGES.HotelwebsiteDevlopment,
+            title: "Hotel Website Devlopment",
+            desc: "Hotel Website Development. We build revenue-driven",
+            route: "hotel-website-devlopment"
+        },
+    ];
 
-    const handleModal = (service) => {
-        setModalClicked(true)
-        setServiceClicked(service)
+    const handleKnowMore = (route) => {
+        router.push(`/services/web-development/${route}`)
     }
 
     return (
-        <div className='w-full flex justify-center items-center'>
-            <div className='flex flex-col justify-center items-center lg:w-[80%] w-[90%] gap-16'>
-                <div className="mt-4 text-center">
-                    <h1 className='text-3xl sm:text-4xl font-bold text-gray-800'>Elevate Your Online Presence</h1>
-                    <h2 className='text-xl sm:text-2xl mt-2 font-medium text-gray-700'>Your Vision, Our Expertise</h2>
-                    <p className='text-base sm:text-lg mt-4 font-normal text-gray-500'>
-                        Partner with us for top-notch website development and maintenance that keeps your business ahead of the curve.
-                    </p>
+        <div className="w-full flex flex-col gap-8 justify-center items-center mt-28">
+            <div className='flex flex-col justify-start items-start w-[85%] lg:w-[80%] gap-4'>
+                <div className="flex items-center text-black font-semibold text-lg w-[85%] lg:w-[25%]">
+                    <span className="text-black ml-1">•</span>
+                    <span className="flex-grow border-t-2 border-gray-300 mr-2"></span>
+                    <span className='text-sm tracking-widest text-gray-600 uppercase'>Krafitech Hospitality</span>
                 </div>
-                <div className='flex flex-col lg:flex-row justify-center items-center gap-8'>
-                    <div className='lg:w-[55%] w-full'>
-                        <Image
-                            src={IMAGES.section1}
-                            alt={`Image`}
-                            width={600}
-                            height={600}
-                            quality={100}
-                            className='object-scale-down h-full w-full'
-                        />
-                    </div>
-                    <div className='lg:w-[45%] w-full grid grid-cols-1 sm:grid-cols-2 gap-4 justify-end items-right'>
-
-                        <div className='hover:shadow-2xl transition-shadow duration-400 ease-in-out rounded-xl'>
-                            <Card className="py-4">
-                                <CardBody className="pb-0 pt-2 px-4 py-2 flex-col items-center">
-                                    <Image
-                                        alt="Card background"
-                                        className="object-scale-down rounded-xl"
-                                        src={IMAGES.card1}
-                                        width={200}
-                                        height={200}
-                                    />
-                                    <div className='flex flex-col justify-center items-center text-center gap-3'>
-                                        <p className="text-base sm:text-lg uppercase font-bold">Tailored Web Solutions</p>
-                                        <p className="text-default-500 text-sm sm:text-base">Delivering personalized web solutions that cater to your specific business objectives and audience requirements.</p>
-                                        <Link href="#" onClick={(e) => {
-                                            e.preventDefault();
-                                            handleModal("Website Development");
-                                        }}>
-                                            <p className="text-[#800000] text-sm sm:text-base inline-flex text-center justify-center items-center">Know more <ChevronRight className='size-5'/></p>
-                                        </Link>
-
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        </div>
-
-                        <div className='hover:shadow-2xl transition-shadow duration-400 ease-in-out rounded-xl'>
-                            <Card className="py-4 h-full">
-                                <CardBody className="pb-0 pt-2 px-4 py-2 flex-col items-center h-full">
-                                    <Image
-                                        alt="Card background"
-                                        className="object-scale-down rounded-xl h-28"
-                                        src={IMAGES.card2}
-                                        width={270}
-                                        height={270}
-                                    />
-                                    <div className='flex flex-col justify-center items-center text-center gap-3'>
-                                        <p className="text-base sm:text-lg uppercase font-bold">Website Maintenance</p>
-                                        <p className="text-default-500 text-sm sm:text-base">Regular updates and support to keep your website running smoothly and securely.</p>
-                                        <Link href="#" onClick={(e) => {
-                                            e.preventDefault();
-                                            handleModal("Website Development");
-                                        }}>
-                                            <p className="text-[#800000] text-sm sm:text-base inline-flex text-center justify-center items-center">Know more <ChevronRight className='size-5'/></p>
-                                        </Link>
-
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        </div>
-
-                        <div className='hover:shadow-2xl transition-shadow duration-400 ease-in-out rounded-xl'>
-                            <Card className="py-4">
-                                <CardBody className="pb-0 pt-2 px-4 py-2 flex-col items-center">
-                                    <Image
-                                        alt="Card background"
-                                        className="object-scale-down rounded-xl h-28"
-                                        src={IMAGES.card3}
-                                        width={270}
-                                        height={270}
-                                    />
-                                    <div className='flex flex-col justify-center items-center text-center gap-3'>
-                                        <p className="text-base sm:text-lg uppercase font-bold">Branding and Graphic Design</p>
-                                        <p className="text-default-500 text-sm sm:text-base">Creating cohesive branding and visually appealing graphics that enhance your online presence and reflect your brand&apos;s identity.</p>
-                                        <Link href="#" onClick={(e) => {
-                                            e.preventDefault();
-                                            handleModal("Website Development");
-                                        }}>
-                                            <p className="text-[#800000] text-sm sm:text-base inline-flex text-center justify-center items-center">Know more <ChevronRight className='size-5'/></p>
-                                        </Link>
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        </div>
-
-                        <div className='hover:shadow-2xl transition-shadow duration-400 ease-in-out rounded-xl'>
-                            <Card className="py-4 hover:shadow-xl transition-shadow duration-300">
-                                <CardBody className="pb-0 pt-2 px-4 py-2 flex-col items-center">
-                                    <Image
-                                        alt="Card background"
-                                        className="object-scale-down rounded-xl h-28"
-                                        src={IMAGES.card4}
-                                        width={270}
-                                        height={270}
-                                    />
-                                    <div className='flex flex-col justify-center items-center text-center gap-3'>
-                                        <p className="text-base sm:text-lg uppercase font-bold">Hosting and Domain Services</p>
-                                        <p className="text-default-500 text-sm sm:text-base">Providing reliable hosting solutions and domain registration services to ensure your website is always accessible and secure.</p>
-                                        <Link href="#" onClick={(e) => {
-                                            e.preventDefault();
-                                            handleModal("Website Development");
-                                        }}>
-                                            <p className="text-[#800000] text-sm sm:text-base inline-flex text-center justify-center items-center">Know more <ChevronRight className='size-5'/></p>
-                                        </Link>
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        </div>
-
-                    </div>
+                <div className='font-extrabold tracking-wide text-4xl uppercase'>
+                    Our Services
                 </div>
             </div>
-
-            <ContactModal modalClicked={modalClicked} onCloseClicked={(val) => setModalClicked(!val)} serviceClicked={serviceClicked} />
-
+            <div className="gap-8 p-4 w-[90%] lg:w-[80%] first-line:lg:justify-center lg:items-center grid lg:grid-cols-3 mt-8">
+                {cardData?.map((item, index) => (
+                    <div key={index} className="card-container w-full h-[25rem]">
+                        <div className="card-inner relative w-full h-[25rem]">
+                            <div className="card-front absolute w-full h-[25rem] rounded-2xl flex flex-col justify-center items-center bg-blue-300  shadow-md">
+                                <Image
+                                    src={item.image}
+                                    alt={`Image ${index + 1}`}
+                                    width={600}
+                                    height={600}
+                                    quality={100}
+                                    className="w-20 h-20 object-contain"
+                                />
+                                <div className='font-semibold tracking-wide mt-2 text-wrap py-2 px-8 text-center text-2xl'>
+                                    {item.title}
+                                </div>
+                                <div className='font-medium tracking-wide mt-1 text-wrap px-11 text-center text-md'>
+                                    {item.desc}
+                                </div>
+                                <div className='tracking-wide mt-4 text-wrap p-2 text-center text-lg'>
+                                    <Button className='font-semibold tracking-widest uppercase bg-white border border-green-300 px-10 py-6' onPress={(e) => handleKnowMore(item.route)}>Know more</Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
 
-export default Description;
+export default Description

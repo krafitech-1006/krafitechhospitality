@@ -177,7 +177,7 @@ const ContactSupport = () => {
                 <div className="flex items-center text-black font-semibold text-lg w-[85%] lg:w-[25%]">
                     <span className="text-black ml-1">•</span>
                     <span className="flex-grow border-t-2 border-gray-300 mr-2"></span>
-                    <span className='text-sm tracking-widest text-gray-600 uppercase'>Krafitech Solutions</span>
+                    <span className='text-sm tracking-widest text-gray-600 uppercase'>Krafitech Hospitality</span>
                 </div>
                 <div className='font-extrabold tracking-wide text-4xl uppercase'>
                     Our Services

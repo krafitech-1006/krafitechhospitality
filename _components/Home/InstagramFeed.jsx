@@ -23,12 +23,17 @@ export default function InstagramReels({ instaFeed }) {
     <div className="flex justify-center items-center w-full bg-red-100 py-20">
       <div className="w-[80%]">
 
-        <div className=" py-12 px-6 text-center">
-          <div className="font-bold tracking-wide text-4xl text-start flex justify-between">
+        <div className="p-2 lg:py-12 lg:px-6 text-center">
+          <div className="hidden font-bold tracking-wide text-4xl text-start lg:flex justify-between">
             <div>WE ARE HIRING</div>
             <div className="flex justify-end pr-10 text-gray-700 text-sm self-end">Immediate Contact Us!</div>
           </div>
-          
+
+          <div className="lg:hidden font-bold tracking-wide flex flex-col justify-center items-center text-center">
+            <div className="flex justify-center text-gray-700 text-sm self-center">Immediate Contact Us!</div>
+            <div className="text-3xl font-extrabold">WE ARE HIRING</div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
             {jobListings.map((job, index) => (
               <div

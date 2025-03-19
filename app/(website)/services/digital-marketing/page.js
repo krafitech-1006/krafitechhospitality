@@ -17,11 +17,11 @@ const page = () => {
 
   return (
     <div className='flex flex-col gap-10 lg:gap-16'>
-      <Landing content={revenuedata} />
+      {/* <Landing content={revenuedata} /> */}
       <Grow/>
       <WhoWeAre/>
-      <HowWeWork/>
-      <Process/>
+      {/* <HowWeWork/>
+      <Process/> */}
     </div>
   )
 }

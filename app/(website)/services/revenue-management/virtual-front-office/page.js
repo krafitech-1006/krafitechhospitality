@@ -21,7 +21,7 @@ const VFO = () => {
 
         <div className='flex flex-row justify-center items-center'>
           <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider'>
-            KRAFITECH SOLUTIONS provides virtual office services for those clients who wants to outsource their front office administration to make their work easier and more comfortable. In these services we provide devoted staff with decent communication skills who will be handling reservation of hotel rooms and tables. The team will also take care of converting business leads through communication channels like calls and emails.
+            Krafitech Hospitality provides virtual office services for those clients who wants to outsource their front office administration to make their work easier and more comfortable. In these services we provide devoted staff with decent communication skills who will be handling reservation of hotel rooms and tables. The team will also take care of converting business leads through communication channels like calls and emails.
           </div>
           <div>
             <img src={IMAGES.VFO} alt="revenuemanagment3d" className='w-full h-full' />

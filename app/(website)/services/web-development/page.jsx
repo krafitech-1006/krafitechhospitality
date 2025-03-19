@@ -16,10 +16,10 @@ const page = () => {
 
   return (
     <div>
-      <Landing content={websitedata} />
-      <Description />
+      {/* <Landing content={websitedata} /> */}
       <Website />
-      <SDLC />
+      <Description />
+      {/* <SDLC /> */}
     </div>
 
   )

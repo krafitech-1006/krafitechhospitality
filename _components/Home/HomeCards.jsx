@@ -65,40 +65,87 @@ import { ChevronRight } from 'lucide-react'
 
 const HomeCards = () => {
     return (
-        <div className='w-full flex flex-col justify-center items-center mt-32'>
-            <div className='flex flex-row w-[80%] border-b-1 border-black pb-5'>
-                <div className='flex flex-col w-[50%] gap-40'>
-                    <div>
-                        <p className='font-bold text-3xl tracking-wide'>Embrace the <span className='text-[#d87ad8]'>Future</span> of</p>
-                        <p className='font-bold text-3xl tracking-wide'>Enterprise Hospitality Technology</p>
-                        <p className='font-bold text-sm tracking-wide text-gray-500 mt-4'>with Our Smart Software Solutions</p>
+        // <div className='w-full flex flex-col justify-center items-center mt-32'>
+        //     <div className='flex flex-row w-[80%] border-b-1 border-black pb-5'>
+        //         <div className='flex flex-col w-[50%] gap-40'>
+        //             <div>
+        //                 <p className='font-bold text-3xl tracking-wide'>Embrace the <span className='text-[#d87ad8]'>Future</span> of</p>
+        //                 <p className='font-bold text-3xl tracking-wide'>Enterprise Hospitality Technology</p>
+        //                 <p className='font-bold text-sm tracking-wide text-gray-500 mt-4'>with Our Smart Software Solutions</p>
+        //             </div>
+        //             <div className='w-full flex justify-center items-center gap-4'>
+        //                 <Button className='rounded-full bg-[#d87ad8] text-black shadow-lg p-6'>
+        //                     <div className='rounded-full bg-black'>
+        //                         <ChevronRight className='text-white size-4 m-2'/>
+        //                     </div>
+        //                     <img src={IMAGES.button1} className='size-8'/><p className='font-semibold text-sm tracking-widest'>PMS</p>
+        //                 </Button>
+        //                 <Button className='rounded-full bg-[#d87ad8] text-black shadow-lg p-6'>
+        //                     <div className='rounded-full bg-black'>
+        //                     <ChevronRight className='text-white size-4 m-2'/>
+        //                     </div>
+        //                     <img src={IMAGES.button2} className='size-8'/><p className='font-semibold text-sm tracking-widest'>RESTAURANT</p>
+        //                 </Button>
+        //             </div>
+        //         </div>
+        //         <div className='w-[50%]'>
+        //             <Image
+        //                 width={1500}
+        //                 height={1500}
+        //                 src={IMAGES.section2}
+        //                 alt="header"
+        //                 className='object-fill'
+        //             />
+        //         </div>
+        //     </div>
+        // </div>
+
+        <div className="w-full flex flex-col justify-center items-center mt-0 md:mt-32 px-4 md:px-8 lg:px-0">
+            <div className="flex flex-col lg:flex-row w-full lg:w-[80%] border-b-1 border-black pb-5">
+                {/* Left Section */}
+                <div className="flex flex-col w-full lg:w-[50%] gap-10 md:gap-20 lg:gap-40">
+                    <div className="text-center lg:text-left">
+                        <p className="font-bold text-2xl md:text-3xl tracking-wide">
+                            Embrace the <span className="text-[#d87ad8]">Future</span> of
+                        </p>
+                        <p className="font-bold text-2xl md:text-3xl tracking-wide">
+                            Enterprise Hospitality Technology
+                        </p>
+                        <p className="font-bold text-sm md:text-base tracking-wide text-gray-500 mt-4">
+                            with Our Smart Software Solutions
+                        </p>
                     </div>
-                    <div className='w-full flex justify-center items-center gap-4'>
-                        <Button className='rounded-full bg-[#d87ad8] text-black shadow-lg p-6'>
-                            <div className='rounded-full bg-black'>
-                                <ChevronRight className='text-white size-4 m-2'/>
+                    {/* Buttons */}
+                    <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4">
+                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6">
+                            <div className="rounded-full bg-black p-1">
+                                <ChevronRight className="text-white size-4 m-1" />
                             </div>
-                            <img src={IMAGES.button1} className='size-8'/><p className='font-semibold text-sm tracking-widest'>PMS</p>
+                            <img src={IMAGES.button1} className="size-6 md:size-8" />
+                            <p className="font-semibold text-xs md:text-sm tracking-widest">PMS</p>
                         </Button>
-                        <Button className='rounded-full bg-[#d87ad8] text-black shadow-lg p-6'>
-                            <div className='rounded-full bg-black'>
-                            <ChevronRight className='text-white size-4 m-2'/>
+                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6">
+                            <div className="rounded-full bg-black p-1">
+                                <ChevronRight className="text-white size-4 m-1" />
                             </div>
-                            <img src={IMAGES.button2} className='size-8'/><p className='font-semibold text-sm tracking-widest'>RESTAURANT</p>
+                            <img src={IMAGES.button2} className="size-6 md:size-8" />
+                            <p className="font-semibold text-xs md:text-sm tracking-widest">RESTAURANT</p>
                         </Button>
                     </div>
                 </div>
-                <div className='w-[50%]'>
+                {/* Right Section (Image) */}
+                <div className="w-full lg:w-[50%] flex justify-center mt-10 lg:mt-0">
                     <Image
-                        width={1500}
-                        height={1500}
+                        width={800}
+                        height={800}
                         src={IMAGES.section2}
                         alt="header"
-                        className='object-fill'
+                        className="object-cover w-full h-auto md:w-[80%] lg:w-auto"
                     />
                 </div>
             </div>
         </div>
+
     )
 }
 

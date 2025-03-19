@@ -46,11 +46,11 @@ const PromoCodeManagement = () => {
 
           <div>
             <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider'>
-            <span className='font-semibold'>Competition Analysis: </span>  Hotel industry is extremely competitive and your hotel and its main rivals are likely to be competing for the same customers on the same OTAs. So, it is important to take the time to get to know about competition, understand what they have to offer customers, and pinpoint their weaknesses too. KRAFITECH SOLUTIONS pays an utmost on competition analysis for our partner hotels to get a competitive advantage over their rivalries.
+            <span className='font-semibold'>Competition Analysis: </span>  Hotel industry is extremely competitive and your hotel and its main rivals are likely to be competing for the same customers on the same OTAs. So, it is important to take the time to get to know about competition, understand what they have to offer customers, and pinpoint their weaknesses too. Krafitech Hospitality pays an utmost on competition analysis for our partner hotels to get a competitive advantage over their rivalries.
             </div>
 
             <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider mt-8'>
-            <span className='font-semibold'>Right Pricing: </span>  Adopting the right pricing strategy is crucial for increasing hotel bookings through OTAs, and it is important that you charge the right price for the right moment. Two of the main pricing strategies KRAFITECH SOLUTIONS follows while setting your prices based on demand, and maintaining price parity across all distribution channels.
+            <span className='font-semibold'>Right Pricing: </span>  Adopting the right pricing strategy is crucial for increasing hotel bookings through OTAs, and it is important that you charge the right price for the right moment. Two of the main pricing strategies Krafitech Hospitality follows while setting your prices based on demand, and maintaining price parity across all distribution channels.
             </div>
           </div>
 

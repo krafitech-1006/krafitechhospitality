@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
       </div> */}
 
-      <footer className="w-full h-fit relative bg-red-100 text-gray-500 mt-32">
+      <footer className="w-full h-fit relative bg-red-100 text-gray-500 mt-0 lg:mt-32">
         <div className="w-[90%] lg:w-[80%] mx-auto">
           {/* <Divider className="w-full" /> */}
 
@@ -136,7 +136,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-[0.25rem]">
               <div className="p-3 px-0 flex flex-col gap-2">
                 <p className="font-semibold tracking-wider text-black">OUR OFFICE</p>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <p className="text-black tracking-wide text-sm">
                   Office No.1006
                   Juhi Niharika Mirage, 274, Kopra Rd, Sector 10, Kharghar, Navi Mumbai, Maharashtra 410210.
@@ -149,7 +149,7 @@ export default function Footer() {
 
               <div className="px-0 lg:px-3 p-3 flex flex-col gap-3">
                 <h4 className="font-semibold tracking-wider text-black">CALL US</h4>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <p className="text-gray-400">
                   Request a quote or just chat about your next vacation
                 </p>
@@ -158,7 +158,7 @@ export default function Footer() {
 
               <div className="px-0 lg:px-3 p-3 flex flex-col gap-3">
                 <h4 className="font-semibold tracking-wider text-black">WRITE TO US</h4>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <p className="text-gray-400">
                   Be it an inquiry, feedback, or a simple suggestion.
                 </p>
@@ -169,7 +169,7 @@ export default function Footer() {
 
               <div className="px-0 lg:px-3 p-3 flex flex-col gap-3">
                 <p className="font-semibold tracking-wider text-black">CONNECT WITH US:</p>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <div className="flex space-x-4 mt-4 md:mt-0 text-themeColor ">
                   {socialLinks.map((link, index) => (
                     <Link
@@ -189,7 +189,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-[0.25rem]">
               <div className="p-3 px-0 flex flex-col gap-3">
                 <h4 className="font-semibold tracking-wider text-black uppercase">Sales</h4>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <Link href="mailto:admin@Krafitechahospitality.com" className="text-gray-400 text-sm">
                   admin@krafitechahospitality.com
                 </Link>
@@ -198,7 +198,7 @@ export default function Footer() {
 
               <div className="px-0 lg:px-3 p-3 flex flex-col gap-3">
                 <h4 className="font-semibold tracking-wider text-black uppercase">Support</h4>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <Link href="mailto:admin@Krafitechahospitality.com" className="text-gray-400 text-sm">
                   admin@krafitechahospitality.com
                 </Link>
@@ -207,7 +207,7 @@ export default function Footer() {
 
               <div className="px-0 lg:px-3 p-3 flex flex-col gap-3">
                 <h4 className="font-semibold tracking-wider text-black uppercase">Tech Support</h4>
-                <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                 <Link href="mailto:admin@Krafitechahospitality.com" className="text-gray-400 text-sm">
                   tech@krafitechahospitality.com
                 </Link>
@@ -223,7 +223,7 @@ export default function Footer() {
                   <h2 className="text-2xl font-semibold tracking-wider text-black uppercase">
                     GET IN TOUCH!
                   </h2>
-                  <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                  <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                   <p className="text-gray-600">
                     Subscribe to our newsletter to find great offers in your
                     inbox.
@@ -297,7 +297,7 @@ export default function Footer() {
 
                   <div>
                     <h3 className="font-semibold tracking-wider text-black uppercase mb-4">Support</h3>
-                    <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                    <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                     <ul className="space-y-1 text-gray-600 flex flex-col">
                       {siteConfig.navItems.map((item) => (
                         <div key={item.href}>
@@ -317,7 +317,7 @@ export default function Footer() {
 
                   <div>
                     <h3 className="font-semibold tracking-wider text-black uppercase mb-4">Quick Links</h3>
-                    <div className="border-b-2 w-4 h-0 border-black mb-3"></div>
+                    <div className="border-b-2 w-4 h-0 border-purple-500 mb-3"></div>
                     <ul className="space-y-1 text-gray-600 flex flex-col">
                       {siteConfig.PoliciesItems.map((item) => (
                         <div key={item.href}>

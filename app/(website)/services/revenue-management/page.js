@@ -21,8 +21,8 @@ const revenuemanagement = () => {
       {/* <Landing content={revenuedata} /> */}
       <Revenuefeatures />
       <ContactSupport />
-      <Challenges />
-      <Rm />
+      {/* <Challenges />
+      <Rm /> */}
     </div>
   )
 }

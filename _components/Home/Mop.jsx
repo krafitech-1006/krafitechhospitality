@@ -11,7 +11,7 @@ const Mop = () => {
                     style={{ border: "0" }}
                     allowFullScreen=""
                     loading="lazy"
-                    className='rounded-xl p-10 w-full'
+                    className='rounded-xl py-20 lg:p-10 w-full'
                     referrerPolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>

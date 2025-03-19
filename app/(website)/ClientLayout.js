@@ -32,7 +32,7 @@ export default function ClientLayout({ children }) {
   return (
     <Providers>
       <NavBar />
-      <WhatsappUi uniqueId={uniqueId}/>
+      {/* <WhatsappUi uniqueId={uniqueId}/> */}
       {children}
       <Footer />
     </Providers>

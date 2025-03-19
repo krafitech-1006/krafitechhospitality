@@ -21,7 +21,7 @@ const OnlineReputationOptimization = () => {
 
         <div className='flex flex-row justify-start items-center'>
           <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider'>
-            One negative comment in online or OTA platforms can massively affect a hotel brand’s reputation. Negative comments in OTA platforms start to take an ugly turn when these elements start affecting your sales and sow seeds of distrust in your customers, making everything you worked so hard for amount to nothing. That’s why KRAFITECH SOLUTIONS gives importance in monitoring our partner’s online reputation very carefully. KRAFITECH SOLUTIONS online reputation optimization process can have a huge impact on your business by monitoring our hotel partners OTA platforms carefully with our artificial intelligence tools and techniques
+            One negative comment in online or OTA platforms can massively affect a hotel brand’s reputation. Negative comments in OTA platforms start to take an ugly turn when these elements start affecting your sales and sow seeds of distrust in your customers, making everything you worked so hard for amount to nothing. That’s why Krafitech Hospitality gives importance in monitoring our partner’s online reputation very carefully. Krafitech Hospitality online reputation optimization process can have a huge impact on your business by monitoring our hotel partners OTA platforms carefully with our artificial intelligence tools and techniques
           </div>
           <div>
             <img src={IMAGES.ONLINEREPUTATIONOPTIMIZATION} alt='ONLINEREPUTATIONOPTIMIZATION' />
@@ -32,11 +32,11 @@ const OnlineReputationOptimization = () => {
         </div>
 
         <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider mt-4'>
-        <span className='font-semibold'>• Online reputation optimization levers: </span> Hotel reviews have a direct impact on your hotel&apos;s demand. A positive review from happy guests can influence the minds of the next reader toying with the idea of booking your hotel. Negative reviews on the other hand, can tarnish the image of your brand. Your hotel&apos;s online reputation therefore holds tremendous value and must be a part of your marketing plan. KRAFITECH SOLUTIONS have strong strategic methods to improve the online brand value of our partner hotels and resorts.
+        <span className='font-semibold'>• Online reputation optimization levers: </span> Hotel reviews have a direct impact on your hotel&apos;s demand. A positive review from happy guests can influence the minds of the next reader toying with the idea of booking your hotel. Negative reviews on the other hand, can tarnish the image of your brand. Your hotel&apos;s online reputation therefore holds tremendous value and must be a part of your marketing plan. Krafitech Hospitality have strong strategic methods to improve the online brand value of our partner hotels and resorts.
         </div>
 
         <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider  mt-16'>
-          <span className='font-semibold'>• Review Optimization: </span>   Managing a hotel’s reputation is crucial in ensuring repeated custom and the acquisition of new customers and there’s no easier way of doing this than via online reviews. OTA platforms and Meta search sites like Trip Advisor are open platforms where people can post reviews about a hotel, its services and facilities. KRAFITECH SOLUTIONS, by working with concerned OTAs, ensure that our partner hotels and resorts have genuine reviews about them on OTAs.
+          <span className='font-semibold'>• Review Optimization: </span>   Managing a hotel’s reputation is crucial in ensuring repeated custom and the acquisition of new customers and there’s no easier way of doing this than via online reviews. OTA platforms and Meta search sites like Trip Advisor are open platforms where people can post reviews about a hotel, its services and facilities. Krafitech Hospitality, by working with concerned OTAs, ensure that our partner hotels and resorts have genuine reviews about them on OTAs.
         </div>
 
         <div className='flex flex-row justify-center items-center mt-8'>
@@ -46,11 +46,11 @@ const OnlineReputationOptimization = () => {
 
           <div>
             <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider'>
-            <span className='font-semibold'>• Reputation Optimization strategy: </span>   The first step in KRAFITECH SOLUTIONS online reputation management strategy is the evaluation of our partner hotels online image. Tracking the reputation is an important part of reputation management, and ideally, it’s a practice that you’ll continue once your primary reputation remediation efforts are finished. That’s because staying on the right track requires constant vigilance A little bit of neglect can turn into a serious problem very quickly
+            <span className='font-semibold'>• Reputation Optimization strategy: </span>   The first step in Krafitech Hospitality online reputation management strategy is the evaluation of our partner hotels online image. Tracking the reputation is an important part of reputation management, and ideally, it’s a practice that you’ll continue once your primary reputation remediation efforts are finished. That’s because staying on the right track requires constant vigilance A little bit of neglect can turn into a serious problem very quickly
             </div>
 
             <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider mt-8'>
-            <span className='font-semibold'>• Building trust: </span>   Building trust in online platforms are not an easy task as building trusts and relationships as there is no direct contact with customers. Managing reputation is crucial in ensuring repeated custom and the acquisition of new customers and there’s no easier way of doing this than via online reviews. KRAFITECH SOLUTIONS follows a quick as well as proper review responding system for our partner hotels which responds to reviews effectively.
+            <span className='font-semibold'>• Building trust: </span>   Building trust in online platforms are not an easy task as building trusts and relationships as there is no direct contact with customers. Managing reputation is crucial in ensuring repeated custom and the acquisition of new customers and there’s no easier way of doing this than via online reviews. Krafitech Hospitality follows a quick as well as proper review responding system for our partner hotels which responds to reviews effectively.
             </div>
           </div>
 

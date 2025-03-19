@@ -1,80 +1,45 @@
-'use client'
-import { ArrowRight, ChartLine, ContactRound, MailOpen } from 'lucide-react'
+"use client"
 import React, { useState } from 'react'
+import Image from 'next/image'
+import IMAGES from "@/public/index";
+import { MoveUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 import ContactModal from '@/_components/ContactModal';
 
 const Grow = () => {
 
-    const [modalClicked, setModalClicked] = useState(false);
-
-    const [serviceClicked, setServiceClicked] = useState(false);
-
-    const handleModal = (service) => {
-        setModalClicked(true)
-        setServiceClicked(service)
-    }
-
     return (
-        <div className='w-[90%] lg:w-[80%] mx-auto flex flex-col gap-16'>
-            <div className='flex flex-col lg:flex-row justify-center items-center w-full gap-5 '>
-                <div className='flex flex-col w-full gap-2'>
-                    <span className='text-[#800000] text-lg font-semibold'>What We Do</span>
-                    <h2 className='text-3xl  font-bold w-full lg:w-[70%]'>Grow Your Business With Krafitech</h2>
-                </div>
-                <div className='w-full'><p className='text-gray-500 text-sm'>At Krafitech Hospitality, we specialize in delivering cutting-edge digital marketing solutions tailored specifically for the hospitality industry. We understand the unique challenges of hotel marketing, and we’re here to help you maximize your online presence, attract more guests, and grow your revenue.</p></div>
-            </div>
-
-            <div className='grid grid-cols-1 lg:grid-cols-3  gap-5 '>
-                <div className='border py-8 px-5 shadow-lg h-80 bg-gray-100 rounded-xl'>
-                    <div className='h-full w-full flex flex-col justify-between gap-5'>
-                        <div className='w-full'>
-                            <span className="bg-[#800000] p-4 rounded-xl inline-flex justify-center items-center">
-                                <ChartLine className='text-white' />
-                            </span>
+        <div className='relative w-full bg-neutral-200 py-52 '>
+            <div className='w-[90%] lg:w-[80%] m-auto '>
+                <div className='flex flex-row gap-0'>
+                    <div className='flex flex-col gap-8'>
+                        <div className='font-bold tracking-wider text-6xl'>Digital Marketing</div>
+                        <div className='rounded-lg bg-yellow-400 text-black p-2 w-[35rem] tracking-widest pr-4'>
+                            Revenue management is an extremely important concept within the hospitality industry, understanding relation between supply, demand, pricing and distribution by using different distribution channels to manage demand at competitive price. Today, playing field is drastically more complex, analyzing,
                         </div>
-                        <h2 className='text-xl font-bold text-[#800000]'>Search Engine Optimization</h2>
-                        <p className='text-gray-500 text-sm'>Make your hotel easily discoverable online. Our SEO experts ensure your website ranks higher on search engines, increasing visibility and organic traffic.</p>
-                        <button className='flex justify-start items-center text-sm font-semibold gap-2 text-center' onClick={(e) => handleModal("Search Engine Optimization")}>Explore More
-                            <ArrowRight className='size-4' />
-                        </button>
+                    </div>
+                    <div className='ml-16'>
+                        <img src={IMAGES.DigitalMarketing} alt='DigitalMarketing' />
                     </div>
                 </div>
 
-                <div className='border py-8 px-5 shadow-lg h-80 bg-gray-100 rounded-xl'>
-                    <div className='h-full w-full flex flex-col justify-between gap-5'>
-                        <div className='w-full'>
-                            <span className="bg-[#800000] p-4 rounded-xl inline-flex justify-center items-center">
-                                <MailOpen className='text-white' />
-                            </span>
-                        </div>
-                        <h2 className='text-xl font-bold text-[#800000]'>Email Marketing</h2>
-                        <p className='text-gray-500 text-sm'>{"Stay connected with your guests and keep your brand top of mind with personalized, well-timed emails."}</p>
-                        <button className='flex justify-start items-center text-sm font-semibold gap-2 text-center' onClick={(e) => handleModal("Email Marketing")}>Explore More
-                            <ArrowRight className='size-4' />
-                        </button>
+                {/* <div className='flex flex-row justify-center items-center'>
+                    <div className='rounded-lg bg-red-300 text-black p-2 w-[35rem] tracking-wider'>
+                    Revenue management is an extremely important concept within the hospitality industry, understanding relation between supply, demand, pricing and distribution by using different distribution channels to manage demand at competitive price. Today, playing field is drastically more complex, analyzing, forecasting, and optimizing hotel inventory through availability restrictions and dynamic rates and have appropriate instrumental in managing a hotel&apos;s demand through various online & offline channels to maximize hotels profit by Yield management. Krafitech Hospitality provides high level of revenue management support at a very sensible price, we extend support consistent 24/7 & 365 days to hotels as it says that ‘Hotel business never sleeps.
                     </div>
-                </div>
-
-                <div className='border py-8 px-5 shadow-lg h-80 bg-gray-100 rounded-xl'>
-                    <div className='h-full w-full flex flex-col justify-between gap-5'>
-                        <div className='w-full'>
-                            <span className="bg-[#800000] p-4 rounded-xl inline-flex justify-center items-center">
-                                <ContactRound className='text-white' />
-                            </span>
-                        </div>
-                        <h2 className='text-xl font-bold text-[#800000]'>Social Media Marketing</h2>
-                        <p className='text-gray-500 text-sm'>Engage your audience where they spend their time. From stunning visuals to captivating campaigns, we help you shine on social media platforms.</p>
-                        <button className='flex justify-start items-center text-sm font-semibold gap-2 text-center' onClick={(e) => handleModal("Social Media Marketing")}>Explore More
-                            <ArrowRight className='size-4' />
-                        </button>
+                    <div>
+                        <img src={IMAGES.revenuemanagment3d} alt="revenuemanagment3d" className='w-full h-full'/>
                     </div>
+                </div> */}
+
+                <div className='tracking-wider mt-16'>
+                    SCROLL DOWN
                 </div>
-
-
 
             </div>
 
-            <ContactModal modalClicked={modalClicked} onCloseClicked={(val) => setModalClicked(!val)} serviceClicked={serviceClicked}/>
+
+
         </div>
     )
 }

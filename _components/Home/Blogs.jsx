@@ -88,9 +88,9 @@ const Blogs = () => {
 `}
 </style>
 
-<div className="gap-16 p-4 w-[90%] lg:w-[70%] first-line:lg:justify-center lg:items-center grid lg:grid-cols-3 mt-8">
+<div className="gap-16 p-4 w-[90%] justify-items-center lg:w-[70%] first-line:lg:justify-center lg:items-center grid lg:grid-cols-3 mt-8">
   {cardData?.map((item, index) => (
-    <div key={index} className="card-container w-full lg:w-[75%] h-[18rem]">
+    <div key={index} className="card-container w-[75%] lg:w-[75%] h-[18rem]">
       <div className="card-inner relative w-full h-[18rem]">
         
         {/* Front Side */}

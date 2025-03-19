@@ -278,13 +278,81 @@ const Allpackages = () => {
 
 
     return (
+        // <div>
+        //     <div className='text-4xl font-bold tracking-wide ml-40 mb-8'>
+        //         See Our Trusted Clients:
+        //     </div>
+        //     <div className='flex justify-center items-center w-full'>
+        //         <div className='w-[98%]'>
+        //             <Swiper
+        //                 slidesPerView={3}
+        //                 spaceBetween={30}
+        //                 centeredSlides={true}
+        //                 autoplay={{
+        //                     delay: 2500,
+        //                     disableOnInteraction: false,
+        //                 }}
+        //                 pagination={{
+        //                     clickable: false,
+        //                 }}
+        //                 navigation={false}
+        //                 modules={[Autoplay]}
+        //                 className="mySwiper w-[90%]"
+        //             >
+        //                 {clientKraft?.map((item, index) => {
+        //                     return (
+        //                         <SwiperSlide className='max-w-[25%] bg-gray-100 rounded-lg shadow-lg overflow-hidden' key={index}>
+        //                             <div className="">
+        //                                 <div className="h-60 w-full">
+        //                                     <Image
+        //                                         alt="Resort Image"
+        //                                         height={1500}
+        //                                         width={1500}
+        //                                         src={item.img}
+        //                                         objectFit="cover"
+        //                                         className="rounded-t-lg"
+        //                                     />
+        //                                 </div>
+        //                                 <div className="p-4 bg-[#bbb6b6]">
+        //                                     <div className="text-xl tracking-wide font-bold text-center py-8">
+        //                                         {item.title}
+        //                                         <div className="w-12 h-1 bg-yellow-600 mx-auto mt-1"></div>
+        //                                     </div>
+        //                                     <p className="text-gray-700 font-semibold mt-3 text-left text-base">
+        //                                         {item.problem}
+        //                                     </p>
+        //                                     <div className="mt-2 text-base max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-600 scrollbar-track-gray-200 pr-2 text-left">
+        //                                         <p className="text-gray-600">
+        //                                             {item.desc}
+        //                                         </p>
+        //                                     </div>
+        //                                 </div>
+        //                             </div>
+        //                         </SwiperSlide>
+        //                     )
+        //                 })}
+        //             </Swiper>
+        //         </div>
+        //     </div>
+
+        // </div>
+
+
+
         <div>
-            <div className='text-4xl font-bold tracking-wide ml-40 mb-8'>
-                See Our Trusted Clients:
-            </div>
-            <div>
+        <div className="text-4xl font-bold tracking-wide ml-40 mb-8 max-md:ml-4 max-md:text-4xl">
+            See Our Trusted Clients:
+        </div>
+        <div className="flex justify-center items-center w-full">
+            <div className="w-[98%]">
                 <Swiper
                     slidesPerView={3}
+                    breakpoints={{
+                        1024: { slidesPerView: 3 },
+                        768: { slidesPerView: 2 },
+                        0: { slidesPerView: 1 },
+                    }}
+                    loop={true}
                     spaceBetween={30}
                     centeredSlides={true}
                     autoplay={{
@@ -300,8 +368,8 @@ const Allpackages = () => {
                 >
                     {clientKraft?.map((item, index) => {
                         return (
-                            <SwiperSlide className='max-w-[25%] bg-gray-100 rounded-lg shadow-lg overflow-hidden' key={index}>
-                                <div className="">
+                            <SwiperSlide className="max-w-[25%] bg-gray-100 rounded-lg shadow-lg overflow-hidden max-md:max-w-full" key={index}>
+                                <div>
                                     <div className="h-60 w-full">
                                         <Image
                                             alt="Resort Image"
@@ -321,18 +389,17 @@ const Allpackages = () => {
                                             {item.problem}
                                         </p>
                                         <div className="mt-2 text-base max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-600 scrollbar-track-gray-200 pr-2 text-left">
-                                            <p className="text-gray-600">
-                                                {item.desc}
-                                            </p>
+                                            <p className="text-gray-600">{item.desc}</p>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                        )
+                        );
                     })}
                 </Swiper>
             </div>
         </div>
+    </div>
     );
 };
 

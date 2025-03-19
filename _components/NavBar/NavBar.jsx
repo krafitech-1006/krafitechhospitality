@@ -45,160 +45,280 @@ const NavBar = () => {
 
 
   return (
-    <div className="fixed top-0 left-0 w-full h-16 z-50 bg-transparent">
-      <div className="py-4 w-[90%] lg:w-[95%] mx-auto flex items-center gap-56">
-        <Link href="/" className="flex justify-center items-center gap-5">
-          <img
-            src={IMAGES.mainLogo}
-            alt="Krafitech-logo"
+    <>
 
-            className="w-52 h-12 object-contain"
-          />
-          {/* <div className="flex flex-col">
-            <span className="text-[#800000] font-semibold leading-tight">
-              Krafitech
-            </span>
-            <span className="font-semibold text-gray-400 leading-tight">
-              Hospitality
-            </span>
-          </div> */}
-        </Link>
+      <div className="hidden lg:block fixed top-0 left-0 w-full h-16 z-50 bg-transparent">
+        <div className="py-4 w-[90%] lg:w-[95%] mx-auto flex items-center gap-56">
+          <Link href="/" className="flex justify-center items-center gap-5">
+            <img
+              src={IMAGES.mainLogo}
+              alt="Krafitech-logo"
 
-        {/* Hamburger icon for small devices */}
-        <div className="lg:hidden flex items-center">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-500 text-3xl focus:outline-none"
-          >
-            {isMenuOpen ? <X /> : <Menu />} {/* Menu open/close icon */}
-          </button>
-        </div>
+              className="w-52 h-12 object-contain" />
 
-        <div className="space-x-8 hidden lg:flex">
-      {links.map((link, index) => (
-        <div
-          key={index}
-          className="relative"
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-        >
-          <Link
-            href={link.url || "#"}
-            className={`p-2 ${pathname === link.url
-              ? "text-blue-300 font-bold text-sm"
-              : "text-blue-300 font-semibold hover:text-black text-sm"
-              }`}
-          >
-            {link.name}
           </Link>
 
-          {link.sublinks && activeDropdown === index && (
-            <div className="absolute left-0 top-full mt-1 bg-white shadow-lg p-2 w-[215px]">
-              {link.sublinks.map((sublink, subIndex) => (
-                <div
-                  key={subIndex}
-                  className="relative"
-                  onMouseEnter={() => handleSubmenuEnter(subIndex)}
-                  onMouseLeave={handleSubmenuLeave}
-                >
-                  <Link
-                    href={sublink.url}
-                    className={`block p-2 ${pathname === sublink.url
-                      ? "text-blue-300 font-bold text-sm uppercase tracking-wide"
-                      : "text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"
-                      }`}
-                  >
-                    {sublink.name}
-                  </Link>
+          {/* Hamburger icon for small devices */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-500 text-3xl focus:outline-none"
+            >
+              {isMenuOpen ? <X /> : <Menu />} {/* Menu open/close icon */}
+            </button>
+          </div>
 
-                  {sublink.sublinks && activeSubmenu === subIndex && (
-                    <div className="absolute left-full top-0 ml-2 bg-white shadow-lg p-2 w-[215px]">
-                      {sublink.sublinks.map((subSubLink, subSubIndex) => (
-                        <Link
-                          key={subSubIndex}
-                          href={subSubLink.url}
-                          className="block p-2 text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"
-                        >
-                          {subSubLink.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-
-        {/* <Link href="/contact-us" className="hidden lg:flex">
-          <Button
-            radius="full"
-            className="bg-[#800000] text-white font-semibold px-4 tracking-wider "
-          >
-            Let’s Get Started!
-          </Button>
-        </Link> */}
-      </div>
-
-      {/* Mobile menu links (only visible when menu is open) */}
-      {isMenuOpen && (
-        <div className="lg:hidden flex flex-col items-center bg-white py-4 space-y-4 absolute z-50 top-16 left-0 w-full h-screen">
-          {links1.map((link, index) => (
-            <div key={index} className="relative w-full text-start">
-              {link.sublinks ? (
-                <button
-                  onClick={() => toggleMobileDropdown(index)}
-                  className={`p-2 w-full text-start px-5 flex justify-between items-center ${isLinkActive(link) ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"
-                    }`}
-                >
-                  {link.name}
-                  {/* Chevron icon to indicate open/close state (only for sublinks) */}
-                  <span>
-                    {activeMobileDropdown === index ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
-                  </span>
-                </button>
-              ) : (
+          <div className="space-x-8 hidden lg:flex">
+            {links.map((link, index) => (
+              <div
+                key={index}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Link
-                  href={link.url}
-                  onClick={handleLinkClick} // Close the menu and navigate
-                  className={`p-2 w-full text-start px-5 ${pathname === link.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"
-                    }`}
+                  href={link.url || "#"}
+                  className={`p-2 ${pathname === link.url
+                    ? "text-blue-300 font-bold text-sm"
+                    : "text-blue-300 font-semibold hover:text-black text-sm"}`}
                 >
                   {link.name}
                 </Link>
-              )}
 
-              {/* Mobile Dropdown */}
-              {link.sublinks && activeMobileDropdown === index && (
-                <div className="flex flex-col items-center mt-2 border bg-gray-200 m-2">
-                  {link.sublinks.map((sublink, subIndex) => (
-                    <Link
-                      key={subIndex}
-                      href={sublink.url}
-                      onClick={handleLinkClick}
-                      className={`block p-2 w-full text-start px-5 ${pathname === sublink.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"
-                        }`}
-                    >
-                      {sublink.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                {link.sublinks && activeDropdown === index && (
+                  <div className="absolute left-0 top-full mt-1 bg-white shadow-lg p-2 w-[215px]">
+                    {link.sublinks.map((sublink, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="relative"
+                        onMouseEnter={() => handleSubmenuEnter(subIndex)}
+                        onMouseLeave={handleSubmenuLeave}
+                      >
+                        <Link
+                          href={sublink.url}
+                          className={`block p-2 ${pathname === sublink.url
+                            ? "text-blue-300 font-bold text-sm uppercase tracking-wide"
+                            : "text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"}`}
+                        >
+                          {sublink.name}
+                        </Link>
 
-          {/* Contact button for small devices */}
-          <Link href="/contact-us" className="w-full flex justify-start pt-5 px-5 ">
-            <Button radius="full" className="bg-[#800000] text-white font-semibold px-4 tracking-wider">
-              Let’s Get Started!
-            </Button>
-          </Link>
+                        {sublink.sublinks && activeSubmenu === subIndex && (
+                          <div className="absolute left-full top-0 ml-2 bg-white shadow-lg p-2 w-[215px]">
+                            {sublink.sublinks.map((subSubLink, subSubIndex) => (
+                              <Link
+                                key={subSubIndex}
+                                href={subSubLink.url}
+                                className="block p-2 text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"
+                              >
+                                {subSubLink.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
         </div>
-      )}
 
-    </div>
+        {/* Mobile menu links (only visible when menu is open) */}
+        {isMenuOpen && (
+          <div className="lg:hidden flex flex-col items-center bg-white py-4 space-y-4 absolute z-50 top-16 left-0 w-full h-screen">
+            {links1.map((link, index) => (
+              <div key={index} className="relative w-full text-start">
+                {link.sublinks ? (
+                  <button
+                    onClick={() => toggleMobileDropdown(index)}
+                    className={`p-2 w-full text-start px-5 flex justify-between items-center ${isLinkActive(link) ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                  >
+                    {link.name}
+                    {/* Chevron icon to indicate open/close state (only for sublinks) */}
+                    <span>
+                      {activeMobileDropdown === index ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
+                    </span>
+                  </button>
+                ) : (
+                  <Link
+                    href={link.url}
+                    onClick={handleLinkClick} // Close the menu and navigate
+                    className={`p-2 w-full text-start px-5 ${pathname === link.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+
+                {/* Mobile Dropdown */}
+                {link.sublinks && activeMobileDropdown === index && (
+                  <div className="flex flex-col items-center mt-2 border bg-gray-200 m-2">
+                    {link.sublinks.map((sublink, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={sublink.url}
+                        onClick={handleLinkClick}
+                        className={`block p-2 w-full text-start px-5 ${pathname === sublink.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                      >
+                        {sublink.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Contact button for small devices */}
+            <Link href="/contact-us" className="w-full flex justify-start pt-5 px-5 ">
+              <Button radius="full" className="bg-[#800000] text-white font-semibold px-4 tracking-wider">
+                Let’s Get Started!
+              </Button>
+            </Link>
+          </div>
+        )}
+
+      </div>
+
+
+
+      <div className="lg:hidden block fixed top-0 left-0 w-full h-24 z-50 bg-transparent">
+        <div className="py-4 w-[90%] lg:w-[95%] mx-auto flex items-center justify-between">
+          <Link href="/" className="flex justify-start items-center gap-5 w-full h-full">
+            <img
+              src={IMAGES.mainLogo}
+              alt="Krafitech-logo"
+              className="max-w-[200px] max-h-[85px] object-contain"
+            />
+
+          </Link>
+
+          {/* Hamburger icon for small devices */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-500 text-3xl focus:outline-none"
+            >
+              {isMenuOpen ? <X /> : <Menu />} {/* Menu open/close icon */}
+            </button>
+          </div>
+
+          <div className="space-x-8 hidden lg:flex">
+            {links.map((link, index) => (
+              <div
+                key={index}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  href={link.url || "#"}
+                  className={`p-2 ${pathname === link.url
+                    ? "text-blue-300 font-bold text-sm"
+                    : "text-blue-300 font-semibold hover:text-black text-sm"}`}
+                >
+                  {link.name}
+                </Link>
+
+                {link.sublinks && activeDropdown === index && (
+                  <div className="absolute left-0 top-full mt-1 bg-white shadow-lg p-2 w-[215px]">
+                    {link.sublinks.map((sublink, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="relative"
+                        onMouseEnter={() => handleSubmenuEnter(subIndex)}
+                        onMouseLeave={handleSubmenuLeave}
+                      >
+                        <Link
+                          href={sublink.url}
+                          className={`block p-2 ${pathname === sublink.url
+                            ? "text-blue-300 font-bold text-sm uppercase tracking-wide"
+                            : "text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"}`}
+                        >
+                          {sublink.name}
+                        </Link>
+
+                        {sublink.sublinks && activeSubmenu === subIndex && (
+                          <div className="absolute left-full top-0 ml-2 bg-white shadow-lg p-2 w-[215px]">
+                            {sublink.sublinks.map((subSubLink, subSubIndex) => (
+                              <Link
+                                key={subSubIndex}
+                                href={subSubLink.url}
+                                className="block p-2 text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"
+                              >
+                                {subSubLink.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+        {/* Mobile menu links (only visible when menu is open) */}
+        {isMenuOpen && (
+          <div className="lg:hidden flex flex-col items-center bg-white py-4 space-y-4 absolute z-50 top-16 left-0 w-full h-screen">
+            {links1.map((link, index) => (
+              <div key={index} className="relative w-full text-start">
+                {link.sublinks ? (
+                  <button
+                    onClick={() => toggleMobileDropdown(index)}
+                    className={`p-2 w-full text-start px-5 flex justify-between items-center ${isLinkActive(link) ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                  >
+                    {link.name}
+                    {/* Chevron icon to indicate open/close state (only for sublinks) */}
+                    <span>
+                      {activeMobileDropdown === index ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
+                    </span>
+                  </button>
+                ) : (
+                  <Link
+                    href={link.url}
+                    onClick={handleLinkClick} // Close the menu and navigate
+                    className={`p-2 w-full text-start px-5 ${pathname === link.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+
+                {/* Mobile Dropdown */}
+                {link.sublinks && activeMobileDropdown === index && (
+                  <div className="flex flex-col items-center mt-2 border bg-gray-200 m-2">
+                    {link.sublinks.map((sublink, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={sublink.url}
+                        onClick={handleLinkClick}
+                        className={`block p-2 w-full text-start px-5 ${pathname === sublink.url ? "text-black font-bold" : "text-gray-500 font-semibold hover:text-black"}`}
+                      >
+                        {sublink.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Contact button for small devices */}
+            <Link href="/contact-us" className="w-full flex justify-start pt-5 px-5 ">
+              <Button radius="full" className="bg-[#800000] text-white font-semibold px-4 tracking-wider">
+                Let’s Get Started!
+              </Button>
+            </Link>
+          </div>
+        )}
+
+      </div>
+
+
+    </>
   );
 };
 
@@ -210,7 +330,22 @@ const links = [
   {
     name: "OUR PRODUCTS",
     url: "/ourproducts",
-    sublinks: [{ name: "CLOUD BASED SYSTEM", url: "/services/cloudbasedsystem" }],
+    sublinks: [
+      {
+        name: "CLOUD BASED SYSTEM",
+        url: "/ourproducts/cloudbasedsystem",
+        sublinks: [
+          {
+            name: "PMS",
+            url: "/ourproducts/cloudbasedsystem/pms",
+          },
+          {
+            name: "RMS",
+            url: "/ourproducts/cloudbasedsystem/rms",
+          }
+        ]
+      }
+    ],
   },
   {
     name: "OUR SERVICES",
@@ -237,32 +372,34 @@ const links = [
           { name: "hotel operations", url: "/services/revenue-management/hotel-operations" },
         ],
       },
-      { name: "Digital Marketing", url: "/services/digital-marketing",
+      {
+        name: "Digital Marketing", url: "/services/digital-marketing",
         sublinks: [
-          { name: "digital brand building", url: "/services/revenue-management/pricing-strategy" },
-          { name: "social media marketing", url: "/services/revenue-management/yield-management" },
-          { name: "photography & video marketing content", url: "/services/revenue-management/yield-management" },
-          { name: "search engine optimization", url: "/services/revenue-management/yield-management" },
-          { name: "productive email", url: "/services/revenue-management/yield-management" },
+          { name: "digital brand building", url: "/services/digital-marketing/digital-brand-building" },
+          { name: "social media marketing", url: "/services/digital-marketing/social-media-marketing" },
+          { name: "photography & video marketing content", url: "/services/digital-marketing/photography-and-video-making-content" },
+          { name: "search engine optimization", url: "/services/digital-marketing/search-engine-optimization" },
+          { name: "productive email", url: "/services/digital-marketing/productive-email" },
         ],
-       },
-      { name: "Web Development", url: "/services/web-development",
+      },
+      {
+        name: "Web Development", url: "/services/web-development",
         sublinks: [
-          { name: "website designing", url: "/services/revenue-management/pricing-strategy" },
-          { name: "website audits", url: "/services/revenue-management/yield-management" },
-          { name: "hotel website development", url: "/services/revenue-management/yield-management" },
+          { name: "website designing", url: "/services/web-development/web-designing" },
+          { name: "website audits", url: "/services/web-development/websites-audit" },
+          { name: "hotel website development", url: "/services/web-development/hotel-website-devlopment" },
         ],
-       },
-      { name: "Booking Engine", url: "/services/bookingengine" },
+      },
+      { name: "Booking Engine", url: "/services/booking-engine" },
     ],
   },
-  { 
-    name: "COMPANY", 
+  {
+    name: "COMPANY",
     url: "/COMPANY",
-    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], 
+    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],
   },
   { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/aboutus" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],  },
+  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], },
 ];
 
 const links1 = [
@@ -298,7 +435,8 @@ const links1 = [
           { name: "hotel operations", url: "/services/revenue-management/hotel-operations" },
         ],
       },
-      { name: "Digital Marketing", url: "/services/digital-marketing",
+      {
+        name: "Digital Marketing", url: "/services/digital-marketing",
         sublinks: [
           { name: "digital brand building", url: "/services/revenue-management/pricing-strategy" },
           { name: "social media marketing", url: "/services/revenue-management/yield-management" },
@@ -306,24 +444,25 @@ const links1 = [
           { name: "search engine optimization", url: "/services/revenue-management/yield-management" },
           { name: "productive email", url: "/services/revenue-management/yield-management" },
         ],
-       },
-      { name: "Web Development", url: "/services/web-development",
+      },
+      {
+        name: "Web Development", url: "/services/web-development",
         sublinks: [
           { name: "website designing", url: "/services/revenue-management/pricing-strategy" },
           { name: "website audits", url: "/services/revenue-management/yield-management" },
           { name: "hotel website development", url: "/services/revenue-management/yield-management" },
         ],
-       },
+      },
       { name: "Booking Engine", url: "/services/bookingengine" },
     ],
   },
-  { 
-    name: "COMPANY", 
+  {
+    name: "COMPANY",
     url: "/COMPANY",
-    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], 
+    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],
   },
   { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/aboutus" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],  },
+  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], },
 ];
 
 
