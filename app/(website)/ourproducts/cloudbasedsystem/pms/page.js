@@ -75,7 +75,7 @@ This section provides various views of the booking history, including reserved, 
 
 
         <div className='flex flex-row justify-start items-start mt-8'>
-          <div>
+          <div className='flex flex-col gap-4'>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
               {`Housekeeping
  Status Shows the current status of each room, indicating whether it needs cleaning, is being cleaned, or has been cleaned.`}
@@ -86,6 +86,39 @@ This section provides various views of the booking history, including reserved, 
           </div>
           <div className='w-[50%] h-full justify-items-center'>
             <Image src={IMAGES.b4} alt='b4' height={1500} width={1500} className='w-[100%] h-[100%]' />
+          </div>
+        </div>
+
+
+        <div className='flex flex-row justify-start items-start mt-8'>
+          <div className='w-[50%] h-full justify-items-center'>
+            <Image src={IMAGES.b5} alt='b5' height={1500} width={1500} className='w-[100%] h-[100%]' />
+          </div>
+          <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
+            {` Property Master
+This section manages the configuration and setup of the property or hotel. It includes details such as hotel information, user management, floor plans, property photos, tax setup, additional services offered, promotional codes, packages, and terms & conditions.`}
+          </div>
+        </div>
+
+
+        <div className='flex flex-row justify-start items-start mt-8'>
+          <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
+            {`Room Inventory
+This section manages the inventory of products and items associated with the hotel, such as toiletries, minibar items, and other supplies. It also handles the procurement process for purchasing inventory items, tracks the receipt of inventory items, and performs periodic stock counts to maintain accurate inventory levels and identify discrepancies.`}
+          </div>
+          <div className='w-[50%] h-full justify-items-center'>
+            <Image src={IMAGES.b6} alt='b6' height={1500} width={1500} className='w-[100%] h-[100%]' />
+          </div>
+        </div>
+
+
+        <div className='flex flex-row justify-start items-start mt-8'>
+          <div className='w-[50%] h-full justify-items-center'>
+            <Image src={IMAGES.b7} alt='b7' height={1500} width={1500} className='w-[100%] h-[100%]' />
+          </div>
+          <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
+            {`Reports
+This section generates various reports to provide insights into different aspects of the hotel's operations. Examples include booking reports, stay-over reports, payment folios, guest lists, credit reports, and reports related to online travel agency (OTA) bookings.`}
           </div>
         </div>
 

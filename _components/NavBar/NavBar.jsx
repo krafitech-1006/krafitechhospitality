@@ -396,10 +396,10 @@ const links = [
   {
     name: "COMPANY",
     url: "/COMPANY",
-    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],
+    sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
   { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/aboutus" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], },
+  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Life at krafitech", url: "/aboutus" }], },
 ];
 
 const links1 = [

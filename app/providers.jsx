@@ -5,6 +5,7 @@ import { store } from '@/app/redux/store';
 import { Provider } from 'react-redux';
 import { Suspense } from 'react';
 // import { SSRProvider } from '@react-aria/ssr';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export function Providers({ children }) {
   return (
@@ -13,7 +14,9 @@ export function Providers({ children }) {
         {/* <NextThemesProvider attribute="class" defaultTheme="light"> */}
         <Suspense>
           {/* <SSRProvider> */}
+          <ParallaxProvider>
             {children}
+          </ParallaxProvider>
           {/* </SSRProvider> */}
         </Suspense>
         {/* </NextThemesProvider> */}

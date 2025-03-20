@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
       </div> */}
 
-      <footer className="w-full h-fit relative bg-red-100 text-gray-500 mt-0 lg:mt-32">
+      <footer className="w-full h-fit relative bg-red-100 text-gray-500 mt-0">
         <div className="w-[90%] lg:w-[80%] mx-auto">
           {/* <Divider className="w-full" /> */}
 
