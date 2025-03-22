@@ -9,16 +9,16 @@ import ContactModal from '@/_components/ContactModal';
 const Grow = () => {
 
     return (
-        <div className='relative w-full bg-neutral-200 py-52 '>
+        <div className='relative w-full bg-neutral-200 py-32 lg:py-52 '>
             <div className='w-[90%] lg:w-[80%] m-auto '>
-                <div className='flex flex-row gap-0'>
+                <div className='flex flex-col lg:flex-row gap-0'>
                     <div className='flex flex-col gap-8'>
-                        <div className='font-bold tracking-wider text-6xl'>Digital Marketing</div>
-                        <div className='rounded-lg bg-yellow-400 text-black p-2 w-[35rem] tracking-widest pr-4'>
+                        <div className='font-bold tracking-wider text-2xl lg:text-6xl'>Digital Marketing</div>
+                        <div className='rounded-lg bg-yellow-400 text-black p-2 w-full lg:w-[35rem] tracking-widest pr-4'>
                             Revenue management is an extremely important concept within the hospitality industry, understanding relation between supply, demand, pricing and distribution by using different distribution channels to manage demand at competitive price. Today, playing field is drastically more complex, analyzing,
                         </div>
                     </div>
-                    <div className='ml-16'>
+                    <div className='mt-8 lg:mt-0 lg:ml-16'>
                         <img src={IMAGES.DigitalMarketing} alt='DigitalMarketing' />
                     </div>
                 </div>

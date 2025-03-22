@@ -70,13 +70,13 @@ const page = () => {
 
   return (
     <div className='bg-white'>
-      <div className='bg-neutral-200 w-full flex flex-col justify-center items-center h-full pt-48 pb-80'>
+      <div className='bg-neutral-200 w-full flex flex-col justify-center items-center h-full pt-32 pb-32 lg:pt-48 lg:pb-80'>
         <div className='w-[80%]'>
           <div className='font-bold tracking-wider text-xl'>
-            Why Join Krafitech Solutions?
+            Why Join Krafitech Hospitality?
           </div>
-          <div className='flex flex-row gap-1'>
-            <div className='w-[50%]'>
+          <div className='flex flex-col lg:flex-row gap-1'>
+            <div className='w-full lg:w-[50%]'>
               <div className='p-2 rounded-lg bg-[#c14ac178] mt-8'>
                 <p>1. Cutting-edge technology: Work with the latest advancements in AI, data analytics, and cloud computing.</p>
                 <p>2. Global presence: Collaborate with professionals from 50+ cities, gain international exposure, and travel opportunities.</p>
@@ -87,7 +87,7 @@ const page = () => {
                 <p>7. Work-life balance: Enjoy a supportive environment that values well-being and offers flexibility.</p>
               </div>
             </div>
-            <div className='w-[50%]'>
+            <div className='w-full lg:w-[50%] mt-8 lg:mt-0'>
               <Image
                 height="1500"
                 width="1500"
@@ -112,11 +112,11 @@ const page = () => {
               <span className="flex-grow border-t-2 border-gray-300 mr-2"></span>
               <span className='text-sm tracking-widest text-gray-600 uppercase'>Krafitech Hospitality</span>
             </div>
-            <div className='font-extrabold tracking-wide text-5xl'>
+            <div className='font-extrabold tracking-wide text-2xl lg:text-5xl'>
               <p>All The Reasons To Start</p>
               <p>Your Career Here</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-[85%] mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-[85%] mt-8 lg:mt-16">
               {reasons.map((reason) => (
                 <div
                   key={reason.id}
@@ -141,7 +141,7 @@ const page = () => {
       <div className='flex w-full flex-col justify-center items-center'>
         <div className='w-[80%] pb-32'>
           <div className='flex flex-col gap-7'>
-            <p className='font-bold text-5xl tracking-wide'>Krafitech Ethos</p>
+            <p className='font-bold text-2xl lg:text-5xl tracking-wide'>Krafitech Ethos</p>
             <p className='text-gray-500'>What makes us stronger as a workforce are the values and principles we encourage within the organisation.</p>
             <p className='mt-1 font-bold text-xl'>The AIR we breathe</p>
           </div>
@@ -149,9 +149,9 @@ const page = () => {
             {reasonsnew.map((reason) => (
               <div
                 key={reason.id}
-                className="bg-blue-200 p-6 rounded-lg shadow-lg border-2 border-orange-500 flex flex-row items-center transition-all duration-300 hover:scale-105 gap-8"
+                className="bg-blue-200 p-6 rounded-lg shadow-lg border-2 border-orange-500 flex flex-col lg:flex-row items-center transition-all duration-300 hover:scale-105 gap-8"
               >
-                <Image src={reason.image} alt={reason.title} width={1500} height={1500} className='size-28' />
+                <Image src={reason.image} alt={reason.title} width={1500} height={1500} className='lg:size-28 size-40' />
                 <div className='flex flex-col w-full gap-2'>
                   <h3 className="text-xl font-semibold text-gray-900 mt-4 text-start">{reason.title}</h3>
                   <p className="text-base text-gray-800 mt-2 text-start">{reason.desc}</p>

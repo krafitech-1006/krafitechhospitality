@@ -5,7 +5,6 @@ import { Plus, SendHorizontal, MessageCircle, Sticker } from 'lucide-react';
 import { CheckboxGroup, Checkbox, Button, Input } from '@nextui-org/react';
 import IMAGES from '@/public/index';
 import Image from 'next/image';
-import KrafitechLogo from "@/app/favicon.ico";
 import { collection, addDoc, query, orderBy, onSnapshot, deleteDoc, getDocs, where } from 'firebase/firestore';
 import { database } from '@/app/config';
 
@@ -227,7 +226,7 @@ const Chat = ({ isOpen, onClose, uniqueId }) => {
               </div>
               <div className="flex justify-start items-center w-[65%]">
                 <div className="w-[36px] h-[36px] md:h-[30px] md:w-[30px] bg-gray-200 rounded-full mr-[10px]">
-                  <Image src={KrafitechLogo} alt="Krafitech-logo" width={300} height={300} className="w-full h-full object-cover" />
+                  <Image src={IMAGES.mainlogoo} alt="Krafitech-logo" width={300} height={300} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex justify-start items-center flex-col leading-4">
                   <div className="w-full text-[16px] text-black font-semibold">Krafitech Hospitality</div>

@@ -4,7 +4,7 @@ export const siteConfig = {
   name2:"Hospitality",
   logoname: "Krafitech",
   description: "Make beautiful websites regardless of your design experience.",
-  favicon: "@/app/favicon.ico",
+  favicon: "/img/mainlogoo.png",
   ownername: "Kamini Singh",
   phoneNumber: "7021719016",
   companyname: "Krafitech Hospitality Pvt. Ltd.",

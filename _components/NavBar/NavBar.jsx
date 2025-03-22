@@ -3,7 +3,7 @@ import IMAGES from "@/public";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronUp, ChevronDown } from "lucide-react";
 
 const NavBar = () => {
@@ -44,10 +44,62 @@ const NavBar = () => {
 
 
 
+
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [navbarBg, setNavbarBg] = useState("bg-transparent");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+
+  //     if (currentScrollY > lastScrollY) {
+  //       // Scrolling Down
+  //       setNavbarVisible(false);
+  //     } else {
+  //       // Scrolling Up
+  //       setNavbarVisible(true);
+  //     }
+
+  //     setLastScrollY(currentScrollY);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [lastScrollY]);
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      // Show navbar when scrolling up, hide when scrolling down
+      setNavbarVisible(currentScrollPos < prevScrollPos || currentScrollPos < 50);
+      setPrevScrollPos(currentScrollPos);
+
+      // Change navbar background after passing the first section
+      if (currentScrollPos > window.innerHeight * 0.8) {
+        setNavbarBg("bg-black backdrop-blur-md shadow-md");
+      } else {
+        setNavbarBg("bg-transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
+
+
   return (
     <>
 
-      <div className="hidden lg:block fixed top-0 left-0 w-full h-16 z-50 bg-transparent">
+      <div className={`hidden lg:block fixed top-0 left-0 w-full h-16 z-50 ${navbarBg} ${
+        navbarVisible ? "translate-y-0 bg-black" : "-translate-y-full"
+      }`}>
         <div className="py-4 w-[90%] lg:w-[95%] mx-auto flex items-center gap-56">
           <Link href="/" className="flex justify-center items-center gap-5">
             <img
@@ -79,8 +131,8 @@ const NavBar = () => {
                 <Link
                   href={link.url || "#"}
                   className={`p-2 ${pathname === link.url
-                    ? "text-blue-300 font-bold text-sm"
-                    : "text-blue-300 font-semibold hover:text-black text-sm"}`}
+                    ? "text-[#00b7ff] font-bold text-sm"
+                    : "text-[#00b7ff] font-semibold hover:text-[#0077ff] text-sm"}`}
                 >
                   {link.name}
                 </Link>
@@ -97,14 +149,14 @@ const NavBar = () => {
                         <Link
                           href={sublink.url}
                           className={`block p-2 ${pathname === sublink.url
-                            ? "text-blue-300 font-bold text-sm uppercase tracking-wide"
-                            : "text-blue-300 font-semibold hover:text-black text-sm uppercase tracking-wide"}`}
+                            ? "text-[#00b7ff] font-bold text-sm uppercase tracking-wide"
+                            : "text-[#00b7ff] font-semibold hover:text-[#0077ff] text-sm uppercase tracking-wide"}`}
                         >
                           {sublink.name}
                         </Link>
 
                         {sublink.sublinks && activeSubmenu === subIndex && (
-                          <div className="absolute left-full top-0 ml-2 bg-white shadow-lg p-2 w-[215px]">
+                          <div className="absolute left-full top-0 ml-0 bg-white shadow-lg p-2 w-[215px]">
                             {sublink.sublinks.map((subSubLink, subSubIndex) => (
                               <Link
                                 key={subSubIndex}
@@ -215,8 +267,8 @@ const NavBar = () => {
                 <Link
                   href={link.url || "#"}
                   className={`p-2 ${pathname === link.url
-                    ? "text-blue-300 font-bold text-sm"
-                    : "text-blue-300 font-semibold hover:text-black text-sm"}`}
+                    ? "text-[#00b7ff] font-bold text-sm"
+                    : "text-[#00b7ff] font-semibold hover:text-black text-sm"}`}
                 >
                   {link.name}
                 </Link>
@@ -325,7 +377,7 @@ const NavBar = () => {
 export default NavBar;
 
 const links = [
-  { name: "HOME", url: "/HOME" },
+  { name: "HOME", url: "/" },
   { name: "SUCCESS STORY", url: "/successstory" },
   {
     name: "OUR PRODUCTS",
@@ -398,17 +450,32 @@ const links = [
     url: "/COMPANY",
     sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
-  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/aboutus" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Life at krafitech", url: "/aboutus" }], },
+  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
+  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
 
 const links1 = [
-  { name: "HOME", url: "/HOME" },
+  { name: "HOME", url: "/" },
   { name: "SUCCESS STORY", url: "/successstory" },
   {
     name: "OUR PRODUCTS",
     url: "/ourproducts",
-    sublinks: [{ name: "CLOUD BASED SYSTEM", url: "/services/cloudbasedsystem" }],
+    sublinks: [
+      {
+        name: "CLOUD BASED SYSTEM",
+        url: "/ourproducts/cloudbasedsystem",
+        sublinks: [
+          {
+            name: "PMS",
+            url: "/ourproducts/cloudbasedsystem/pms",
+          },
+          {
+            name: "RMS",
+            url: "/ourproducts/cloudbasedsystem/rms",
+          }
+        ]
+      }
+    ],
   },
   {
     name: "OUR SERVICES",
@@ -438,32 +505,31 @@ const links1 = [
       {
         name: "Digital Marketing", url: "/services/digital-marketing",
         sublinks: [
-          { name: "digital brand building", url: "/services/revenue-management/pricing-strategy" },
-          { name: "social media marketing", url: "/services/revenue-management/yield-management" },
-          { name: "photography & video marketing content", url: "/services/revenue-management/yield-management" },
-          { name: "search engine optimization", url: "/services/revenue-management/yield-management" },
-          { name: "productive email", url: "/services/revenue-management/yield-management" },
+          { name: "digital brand building", url: "/services/digital-marketing/digital-brand-building" },
+          { name: "social media marketing", url: "/services/digital-marketing/social-media-marketing" },
+          { name: "photography & video marketing content", url: "/services/digital-marketing/photography-and-video-making-content" },
+          { name: "search engine optimization", url: "/services/digital-marketing/search-engine-optimization" },
+          { name: "productive email", url: "/services/digital-marketing/productive-email" },
         ],
       },
       {
         name: "Web Development", url: "/services/web-development",
         sublinks: [
-          { name: "website designing", url: "/services/revenue-management/pricing-strategy" },
-          { name: "website audits", url: "/services/revenue-management/yield-management" },
-          { name: "hotel website development", url: "/services/revenue-management/yield-management" },
+          { name: "website designing", url: "/services/web-development/web-designing" },
+          { name: "website audits", url: "/services/web-development/websites-audit" },
+          { name: "hotel website development", url: "/services/web-development/hotel-website-devlopment" },
         ],
       },
-      { name: "Booking Engine", url: "/services/bookingengine" },
+      { name: "Booking Engine", url: "/services/booking-engine" },
     ],
   },
   {
     name: "COMPANY",
     url: "/COMPANY",
-    sublinks: [{ name: "About Us", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }],
+    sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
-  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/aboutus" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/aboutus" }, { name: "Life at krafitech", url: "/aboutus" }], },
+  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
+  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
-
 
 

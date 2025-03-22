@@ -38,7 +38,7 @@ const Description = () => {
     }
 
     return (
-        <div className="w-full flex flex-col gap-8 justify-center items-center mt-28">
+        <div className="w-full flex flex-col gap-8 justify-center items-center mt-28 pb-16">
             <div className='flex flex-col justify-start items-start w-[85%] lg:w-[80%] gap-4'>
                 <div className="flex items-center text-black font-semibold text-lg w-[85%] lg:w-[25%]">
                     <span className="text-black ml-1">•</span>
