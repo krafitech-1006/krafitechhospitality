@@ -1,4 +1,4 @@
-import { MoveDown } from 'lucide-react';
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
@@ -7,8 +7,12 @@ import Image from 'next/image';
 import "@/styles/landing.css"
 import VIDEOS from "@/public/video";
 import { ChevronRight } from "lucide-react"
+import { useRouter } from 'next/navigation';
 
 const Landing = (props) => {
+
+  const router = useRouter();
+
   return (
     <div className="w-full h-[45rem] md:h-full flex justify-center items-center">
       {/* Background Image */}
@@ -44,9 +48,11 @@ const Landing = (props) => {
               </p>
             </div>
             <div>
-              <Button className='border-white border-medium bg-transparent rounded-full border-opacity-10 p-7'>
+              <Button className='border-white border-medium bg-transparent rounded-full border-opacity-10 p-7' onPress={(e) => {
+                router.push('/company/aboutus')
+              }}>
                 <div className='rounded-full bg-white'>
-                  <ChevronRight />
+                  <ChevronRight className='p-1'/>
                 </div>
                 <p className='tracking-widest text-white'>MORE DETAILS</p>
               </Button>
@@ -78,7 +84,9 @@ const Landing = (props) => {
               </p>
             </div>
             <div>
-              <Button className='border-white border-medium bg-transparent rounded-full border-opacity-10 p-6'>
+              <Button className='border-white border-medium bg-transparent rounded-full border-opacity-10 p-6' onPress={(e) => {
+                router.push('/company/aboutus')
+              }}>
                 <div className='rounded-full bg-white p-2'>
                   <ChevronRight className='size-4'/>
                 </div>

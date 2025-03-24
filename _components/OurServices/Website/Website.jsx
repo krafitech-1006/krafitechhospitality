@@ -22,7 +22,7 @@ const Website = () => {
                         <img src={IMAGES.Webdevelopment} alt="Webdevelopment" className='w-[85%] h-[85%]' />
                     </div> */}
                     <div className='relative h-full w-full lg:w-[40%] mt-10'>
-                        <img src={IMAGES.Webdevelopment} alt='Webdevelopment' className='absolute  top-[0px] left-[62px] w-[85%] h-[385%] z-50' />
+                        <img src={IMAGES.Webdevelopment} alt='Webdevelopment' className='absolute  top-[0px] left-[62px] w-[85%] h-[385%] z-30' />
                         <div className='flex flex-row justify-between'>
                             <img src={IMAGES.WebdevelopmentOne} alt='WebdevelopmentOne' className='w-[20%] h-[20%] z-0' />
                             <img src={IMAGES.WebdevelopmentTwo} alt='WebdevelopmentTwo' className='w-[20%] h-[20%] z-0' />

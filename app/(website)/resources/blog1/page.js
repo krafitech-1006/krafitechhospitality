@@ -4,8 +4,23 @@ import Image from 'next/image'
 import IMAGES from "@/public/index";
 import { Button } from '@nextui-org/react';
 import { ChevronRight } from "lucide-react"
+import { useRouter } from 'next/navigation';
 
 const Blog1 = () => {
+
+
+  const router = useRouter()
+
+  const handleNavigation = (action) => {
+    if (action === "back") {
+      router.push('/resources/blog')
+    }
+
+    if (action === "next") {
+      router.push('/resources/blog2')
+    }
+
+  }
 
   return (
     <div className='relative w-full bg-neutral-200 py-32 lg:py-56 '>
@@ -65,18 +80,18 @@ const Blog1 = () => {
           </div>
 
           <div className='w-[50%] h-full justify-items-center'>
-            
+
           </div>
         </div>
 
 
-       <p className='mt-8 font-semibold'>In today’s world, where every service is taking a step digitally, Online Reputation Management is significantly important impacting the bottom line and the customer loyalty in the Hospitality Sector. So, wait no more and get in touch with us by writing to info@krafitechsolution.com and our team will contact you to explain you further.</p>
+        <p className='mt-8 font-semibold'>In today’s world, where every service is taking a step digitally, Online Reputation Management is significantly important impacting the bottom line and the customer loyalty in the Hospitality Sector. So, wait no more and get in touch with us by writing to info@krafitechsolution.com and our team will contact you to explain you further.</p>
 
 
         <div className='mt-8'>
           <div className='flex flex-row justify-start items-start gap-2'>
-            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Back</Button>
-            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button>
+            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
+            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
           </div>
         </div>
       </div>

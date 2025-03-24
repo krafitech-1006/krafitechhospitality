@@ -4,6 +4,7 @@ import Image from 'next/image'
 import IMAGES from "@/public/index";
 import { Button } from '@nextui-org/react';
 import { ChevronRight } from "lucide-react"
+import { useRouter } from 'next/navigation';
 
 const RMS = () => {
 
@@ -111,6 +112,19 @@ const RMS = () => {
     },
   ]
 
+const router = useRouter()
+
+    const handleNavigation = (action) => {
+      if (action === "back") {
+        router.push('/ourproducts/cloudbasedsystem/pms')
+      }
+  
+      // if (action === "next") {
+      //   router.push('/ourproducts/cloudbasedsystem/rms')
+      // }
+  
+    }
+
   return (
     <div>
       <div className='hidden lg:block relative w-full bg-neutral-200 py-56 '>
@@ -128,7 +142,9 @@ const RMS = () => {
 
           </div>
           <div>
-            <Button className='border-white border bg-[#eba022] rounded-full border-opacity-70 p-6 shadow-2xl'>
+            <Button className='border-white border bg-[#eba022] rounded-full border-opacity-70 p-6 shadow-2xl' onPress={(e) => {
+                router.push('/support/contact')
+              }}>
               <div className='rounded-full bg-black p-2'>
                 <ChevronRight className='size-4 text-white' />
               </div>
@@ -268,7 +284,7 @@ const RMS = () => {
 
           <div className='mt-8'>
             <div className='flex flex-row justify-start items-start gap-2'>
-              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Back</Button>
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
               {/* <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button> */}
             </div>
           </div>
@@ -301,7 +317,9 @@ const RMS = () => {
             </div>
           </div>
           <div>
-            <Button className='border-white border bg-[#eba022] rounded-full border-opacity-70 p-6 shadow-2xl'>
+            <Button className='border-white border bg-[#eba022] rounded-full border-opacity-70 p-6 shadow-2xl' onPress={(e) => {
+                router.push('/support/contact')
+              }}>
               <div className='rounded-full bg-black p-2'>
                 <ChevronRight className='size-4 text-white' />
               </div>
@@ -342,7 +360,7 @@ const RMS = () => {
 
           <div className='mt-8'>
             <div className='flex flex-row justify-start items-start gap-2'>
-              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Back</Button>
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
               {/* <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button> */}
             </div>
           </div>

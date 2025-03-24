@@ -381,7 +381,7 @@ const links = [
   { name: "SUCCESS STORY", url: "/successstory" },
   {
     name: "OUR PRODUCTS",
-    url: "/ourproducts",
+    url: "/ourproducts/cloudbasedsystem",
     sublinks: [
       {
         name: "CLOUD BASED SYSTEM",
@@ -401,7 +401,7 @@ const links = [
   },
   {
     name: "OUR SERVICES",
-    url: "/services",
+    url: "/services/revenue-management",
     sublinks: [
       {
         name: "Revenue Management",
@@ -447,11 +447,11 @@ const links = [
   },
   {
     name: "COMPANY",
-    url: "/COMPANY",
+    url: "/company/aboutus",
     sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
-  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
+  { name: "RESOURCES", url: "/resources/blog", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
+  { name: "SUPPORT", url: "24/7 Tech support", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
 
 const links1 = [
@@ -459,7 +459,7 @@ const links1 = [
   { name: "SUCCESS STORY", url: "/successstory" },
   {
     name: "OUR PRODUCTS",
-    url: "/ourproducts",
+    url: "/ourproducts/cloudbasedsystem",
     sublinks: [
       {
         name: "CLOUD BASED SYSTEM",
@@ -479,7 +479,7 @@ const links1 = [
   },
   {
     name: "OUR SERVICES",
-    url: "/services",
+    url: "/services/revenue-management",
     sublinks: [
       {
         name: "Revenue Management",
@@ -525,11 +525,11 @@ const links1 = [
   },
   {
     name: "COMPANY",
-    url: "/COMPANY",
+    url: "/company/aboutus",
     sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
-  { name: "RESOURCES", url: "/testimonials", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
-  { name: "SUPPORT", url: "/blogs", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
+  { name: "RESOURCES", url: "/resources/blog", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
+  { name: "SUPPORT", url: "24/7 Tech support", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
 
 

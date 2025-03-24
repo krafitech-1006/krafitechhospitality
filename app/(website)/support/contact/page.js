@@ -1,8 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import IMAGES from '@/public'
-import Mop from '@/_components/Home/Mop'
+import Swal from 'sweetalert2';
 
 const Contact = () => {
 
@@ -21,10 +19,42 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     // You can send formData to an API or perform further processing
+    const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    operation: "serviceContact",
+                    formValues: formData,
+                }),
+            });
+    
+            if (response.ok) {
+                Swal.fire({
+    
+                    title: "Form submitted successfully!",
+    
+                    text: "Team connect with you soon",
+    
+                    icon: "success"
+    
+                }).then((result) => {
+    
+    
+                });
+
+                setFormData({
+                  name: "",
+                  mobile: "",
+                  email: "",
+                  message: "",
+                })
+            } else {
+    
+            }
   };
 
 

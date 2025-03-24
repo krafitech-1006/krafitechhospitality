@@ -62,8 +62,12 @@ import IMAGES from '@/public'
 import Image from 'next/image'
 import { Button } from '@nextui-org/react'
 import { ChevronRight } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const HomeCards = () => {
+
+    const router = useRouter()
+
     return (
         // <div className='w-full flex flex-col justify-center items-center mt-32'>
         //     <div className='flex flex-row w-[80%] border-b-1 border-black pb-5'>
@@ -117,14 +121,18 @@ const HomeCards = () => {
                     </div>
                     {/* Buttons */}
                     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4">
-                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6">
+                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6" onPress={(e) => {
+                router.push('/ourproducts/cloudbasedsystem/pms')
+              }}>
                             <div className="rounded-full bg-black p-1">
                                 <ChevronRight className="text-white size-4 m-1" />
                             </div>
                             <img src={IMAGES.button1} className="size-6 md:size-8" />
                             <p className="font-semibold text-xs md:text-sm tracking-widest">PMS</p>
                         </Button>
-                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6">
+                        <Button className="flex items-center gap-2 rounded-full bg-[#d87ad8] text-black shadow-lg p-4 md:p-6" onPress={(e) => {
+                router.push('/ourproducts/cloudbasedsystem/rms')
+              }}>
                             <div className="rounded-full bg-black p-1">
                                 <ChevronRight className="text-white size-4 m-1" />
                             </div>

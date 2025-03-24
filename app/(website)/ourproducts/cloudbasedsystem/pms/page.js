@@ -59,12 +59,12 @@ const PMS = () => {
   
     const handleNavigation = (action) => {
       if (action === "back") {
-        router.push('/ourproducts')
+        router.push('/ourproducts/cloudbasedsystem')
       }
   
-      // if (action === "next") {
-      //   router.push('/ourproducts/cloudbasedsystem/pms')
-      // }
+      if (action === "next") {
+        router.push('/ourproducts/cloudbasedsystem/rms')
+      }
   
     }
 
@@ -86,7 +86,9 @@ const PMS = () => {
 
           </div>
           <div>
-            <Button className='border-white border bg-[#8690db] rounded-full border-opacity-70 p-6 shadow-2xl'>
+            <Button className='border-white border bg-[#8690db] rounded-full border-opacity-70 p-6 shadow-2xl' onPress={(e) => {
+                router.push('/support/contact')
+              }}>
               <div className='rounded-full bg-black p-2'>
                 <ChevronRight className='size-4 text-white' />
               </div>
@@ -98,7 +100,7 @@ const PMS = () => {
 
           <div className='flex flex-row justify-start items-start mt-8'>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {` New Reservation section allows you to create a new reservation. It typically includes fields to enter guest information, check-in/check-out dates, room preferences, and other details required to make a booking.`}
+              <span className='font-semibold'>New Reservation</span> section allows you to create a new reservation. It typically includes fields to enter guest information, check-in/check-out dates, room preferences, and other details required to make a booking.
             </div>
             <div className='w-[50%] h-full justify-items-center'>
               <Image src={IMAGES.colornewreservationtab} alt='colornewreservationtab' height={1500} width={1500} className='w-[100%] h-[100%]' />
@@ -111,15 +113,14 @@ const PMS = () => {
               <Image src={IMAGES.b2} alt='b2' height={1500} width={1500} className='w-[100%] h-[100%]' />
             </div>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {` Booking History
-This section provides various views of the booking history, including reserved, checked-in, checked-out, cancelled, and on-hold reservations, as well as bookings made through the Internet Booking Engine (IBE).`}
+            <span className='font-semibold'>Booking History</span>This section provides various views of the booking history, including reserved, checked-in, checked-out, cancelled, and on-hold reservations, as well as bookings made through the Internet Booking Engine {"(IBE)"}.
             </div>
           </div>
 
 
           <div className='flex flex-row justify-start items-start mt-8'>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {` Online Booking This section is dedicated to managing online bookings. It may include features such as integrating with online travel agencies (OTAs) or managing bookings made through the hotel's website or other online platforms.`}
+            <span className='font-semibold'>Online Booking </span> This section is dedicated to managing online bookings. It may include features such as integrating with online travel agencies {"(OTAs)"} or managing bookings made through the hotel&apos;s website or other online platforms.
             </div>
             <div className='w-[50%] h-full justify-items-center'>
               <Image src={IMAGES.b3} alt='b3' height={1500} width={1500} className='w-[100%] h-[100%]' />
@@ -132,7 +133,7 @@ This section provides various views of the booking history, including reserved, 
             <Image src={IMAGES.b4} alt='b4' height={1500} width={1500} className='w-[100%] h-[100%]' />
           </div> */}
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {` Booking Chart The booking chart provides a visual representation of room availability. It typically displays a calendar with color-coded blocks representing the status of each room (e.g., available, booked, occupied). This helps hotel staff easily understand room occupancy at a glance.`}
+            <span className='font-semibold'>Booking Chart </span> The booking chart provides a visual representation of room availability. It typically displays a calendar with color-coded blocks representing the status of each room {"(e.g., available, booked, occupied)"}. This helps hotel staff easily understand room occupancy at a glance.
             </div>
           </div>
 
@@ -140,11 +141,11 @@ This section provides various views of the booking history, including reserved, 
           <div className='flex flex-row justify-start items-start mt-8'>
             <div className='flex flex-col gap-4'>
               <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-                {`Housekeeping
- Status Shows the current status of each room, indicating whether it needs cleaning, is being cleaned, or has been cleaned.`}
+                <p className='font-semibold'>Housekeeping</p>
+                <span className='font-semibold'>Status </span>Shows the current status of each room, indicating whether it needs cleaning, is being cleaned, or has been cleaned.
               </div>
               <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-                {`Checklist Provides a list of tasks or items to be checked or completed during the housekeeping process, ensuring all necessary steps are followed for room preparation.`}
+              <span className='font-semibold'>Checklist </span> Provides a list of tasks or items to be checked or completed during the housekeeping process, ensuring all necessary steps are followed for room preparation.
               </div>
             </div>
             <div className='w-[50%] h-full justify-items-center'>
@@ -158,16 +159,16 @@ This section provides various views of the booking history, including reserved, 
               <Image src={IMAGES.b5} alt='b5' height={1500} width={1500} className='w-[100%] h-[100%]' />
             </div>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {` Property Master
-This section manages the configuration and setup of the property or hotel. It includes details such as hotel information, user management, floor plans, property photos, tax setup, additional services offered, promotional codes, packages, and terms & conditions.`}
+              <p className='font-semibold'>Property Master</p>
+This section manages the configuration and setup of the property or hotel. It includes details such as hotel information, user management, floor plans, property photos, tax setup, additional services offered, promotional codes, packages, and terms & conditions.
             </div>
           </div>
 
 
           <div className='flex flex-row justify-start items-start mt-8'>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {`Room Inventory
-This section manages the inventory of products and items associated with the hotel, such as toiletries, minibar items, and other supplies. It also handles the procurement process for purchasing inventory items, tracks the receipt of inventory items, and performs periodic stock counts to maintain accurate inventory levels and identify discrepancies.`}
+            <p className='font-semibold'>Room Inventory</p>
+This section manages the inventory of products and items associated with the hotel, such as toiletries, minibar items, and other supplies. It also handles the procurement process for purchasing inventory items, tracks the receipt of inventory items, and performs periodic stock counts to maintain accurate inventory levels and identify discrepancies.
             </div>
             <div className='w-[50%] h-full justify-items-center'>
               <Image src={IMAGES.b6} alt='b6' height={1500} width={1500} className='w-[100%] h-[100%]' />
@@ -180,8 +181,8 @@ This section manages the inventory of products and items associated with the hot
               <Image src={IMAGES.b7} alt='b7' height={1500} width={1500} className='w-[100%] h-[100%]' />
             </div>
             <div className='rounded-lg bg-pink-300 text-black p-2 w-[35rem] tracking-wider'>
-              {`Reports
-This section generates various reports to provide insights into different aspects of the hotel's operations. Examples include booking reports, stay-over reports, payment folios, guest lists, credit reports, and reports related to online travel agency (OTA) bookings.`}
+              <p className='font-semibold'>Reports</p>
+This section generates various reports to provide insights into different aspects of the hotel&apos;s operations. Examples include booking reports, stay-over reports, payment folios, guest lists, credit reports, and reports related to online travel agency {"(OTA)"} bookings.
             </div>
           </div>
 
@@ -189,7 +190,7 @@ This section generates various reports to provide insights into different aspect
           <div className='mt-8'>
             <div className='flex flex-row justify-start items-start gap-2'>
               <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
-              {/* <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button> */}
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
             </div>
           </div>
         </div>
@@ -214,7 +215,9 @@ This section generates various reports to provide insights into different aspect
             </div>
           </div>
           <div>
-            <Button className='border-white border bg-[#8690db] rounded-full border-opacity-70 p-6 shadow-2xl'>
+            <Button className='border-white border bg-[#8690db] rounded-full border-opacity-70 p-6 shadow-2xl' onPress={(e) => {
+                router.push('/support/contact')
+              }}>
               <div className='rounded-full bg-black p-2'>
                 <ChevronRight className='size-4 text-white' />
               </div>
@@ -254,6 +257,7 @@ This section generates various reports to provide insights into different aspect
               <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>
                 Back
               </Button>
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
             </div>
           </div>
         </div>

@@ -3,8 +3,23 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import IMAGES from "@/public/index";
 import { Button } from '@nextui-org/react';
+import { useRouter } from 'next/navigation';
 
 const Blog2 = () => {
+
+
+  const router = useRouter()
+
+  const handleNavigation = (action) => {
+    if (action === "back") {
+      router.push('/resources/blog1')
+    }
+
+    if (action === "next") {
+      router.push('/resources/blog3')
+    }
+
+  }
 
   return (
     <div>
@@ -171,8 +186,8 @@ const Blog2 = () => {
 
           <div className='mt-8'>
             <div className='flex flex-row justify-start items-start gap-2'>
-              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Back</Button>
-              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button>
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
+              <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
             </div>
           </div>
         </div>
@@ -255,8 +270,8 @@ const Blog2 = () => {
 
         {/* Buttons */}
         <div className='mt-12 flex justify-center md:justify-start gap-4'>
-          <Button className='bg-white tracking-widest uppercase text-black py-4 px-8 font-semibold border border-gray-300 shadow-lg'>Back</Button>
-          <Button className='bg-white tracking-widest uppercase text-black py-4 px-8 font-semibold border border-gray-300 shadow-lg'>Next</Button>
+          <Button className='bg-white tracking-widest uppercase text-black py-4 px-8 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
+          <Button className='bg-white tracking-widest uppercase text-black py-4 px-8 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
         </div>
       </div>
     </div>

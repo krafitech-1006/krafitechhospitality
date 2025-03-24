@@ -6,8 +6,22 @@ import { MoveUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import ContactModal from '@/_components/ContactModal';
 import { Button } from '@nextui-org/react';
+import { useRouter } from 'next/navigation';
 
 const PropertyAudit = () => {
+
+const router = useRouter()
+
+    const handleNavigation = (action) => {
+      if (action === "back") {
+        router.push('/services/revenue-management/growth-report')
+      }
+  
+      if (action === "next") {
+        router.push('/services/revenue-management/b2b-partnership')
+      }
+  
+    }
 
   return (
     <div className='relative w-full bg-neutral-200 py-40 '>
@@ -32,8 +46,8 @@ const PropertyAudit = () => {
 
         <div className='mt-8'>
           <div className='flex flex-row justify-start items-start gap-2'>
-            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Back</Button>
-            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg'>Next</Button>
+            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("back")}>Back</Button>
+            <Button className='bg-white tracking-widest uppercase text-black py-7 px-11 font-semibold border border-gray-300 shadow-lg' onPress={(e) => handleNavigation("next")}>Next</Button>
           </div>
         </div>
 

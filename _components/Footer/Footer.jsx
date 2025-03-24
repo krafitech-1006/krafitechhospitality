@@ -9,7 +9,7 @@ import { Plus } from "lucide-react";
 import Image from "next/image";
 import IMAGES from "@/public/index";
 import { usePathname } from "next/navigation";
-import axios from "axios";
+import Swal from 'sweetalert2';
 
 export default function Footer() {
 
@@ -45,58 +45,40 @@ export default function Footer() {
 
     console.log("Data", email, fullName, phoneNumber)
 
-    const response1 = await fetch('/api/enquiries/serviceenquiry', {
+    const formData = {
+      name: fullName,
+      mobile: phoneNumber,
+      email: email,
+      message: "Contact",
+    }
 
+
+    const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        operation: "serviceContact2",
-        formValues: {
-          name: fullName,
-          email: email,
-          number: phoneNumber,
-        },
+        operation: "serviceContact",
+        formValues: formData,
       }),
     });
-
-    const data1 = await response1.json();
-
-    const response = await axios.post("/api/send-email", {
-      operation: "footercontact",
-      name: fullName,
-      email: email,
-      number: phoneNumber
-    })
-    if (response.data.status === 200) {
-      alert("Email sent and enquiry saved successfully")
+    if (response.ok) {
+      Swal.fire({
+          
+                          title: "Form submitted successfully!",
+          
+                          text: "Team connect with you soon",
+          
+                          icon: "success"
+          
+                      }).then((result) => {
+          
+          
+                      });
       setFullName("");
       setEmail("");
       setPhoneNumber("");
     }
 
-    // else if (response.data.status === 402) {
-    //   Swal.fire({
-    //     title: "Number must be exactly 10 digits and contain only numeric values",
-    //     // text: "Team connect with you soon",
-    //     icon: "success"
-    //   });
-    // }
-    //     const whatsappMessage = `Hi, I am interested in your service*.
-
-    // *My details are -* 
-
-    //   *Name:* ${fullName},
-    //   *Phone:* ${phoneNumber}, 
-    //   *Email:* ${email}`;
-
-    //     const whatsappURL = `https://wa.me/7738527031?text=${encodeURIComponent(
-    //       whatsappMessage
-    //     )}`;
-    //     window.open(whatsappURL, "_blank");
-
-    //     setFullName("");
-    //     setEmail("");
-    //     setPhoneNumber(0);
   };
 
 
