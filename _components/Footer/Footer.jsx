@@ -322,7 +322,7 @@ export default function Footer() {
           </div>
 
           {/* <Divider className="w-full" /> */}
-          <div className="w-full flex flex-col md:flex-row justify-between pt-4">
+          {/* <div className="w-full flex flex-col md:flex-row justify-between pt-4">
             <p className="mt-4 pb-10 text-sm text-gray-400 font-semibold">
               &copy; Copyright 2024. All Rights Reserved by Krafitech Hospitality
               Pvt. Ltd.
@@ -337,7 +337,7 @@ export default function Footer() {
               />
               <p className="text-gray-400 font-semibold">An ISO certified Company</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>
