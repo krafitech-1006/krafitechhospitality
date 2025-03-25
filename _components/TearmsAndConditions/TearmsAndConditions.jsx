@@ -5,7 +5,7 @@ import IMAGES from '@/public/index'
 const TearmsAndConditions = () => {
 
     return (
-        <div className='mt-16'>
+        <div className='py-32'>
             <div className=''>
                 <div className="text-2xl text-[#800000] text-center font-extralight mt-4 md:text-2xl lg:text-4xl lg:font-bold">
                     {'Terms and Condtiton'}
@@ -346,9 +346,9 @@ const TearmsAndConditions = () => {
                                 {"12. Contact Information"}
                             </h3>
                             <ul className='flex flex-col gap-2 mt-4'>
-                                <li><span className='font-semibold'>Email:</span>{` Krafitechahospitality@gmail.com`}</li>
-                                <li><span className='font-semibold'>Phone:</span>{` +91 7977383452`}</li>
-                                <li><span className='font-semibold'>Address:</span>{` Krafitecha Hospitality, Office No.1006 Juhi Niharika Mirage, 274, Kopra Rd, Sector 10, Kharghar, Navi Mumbai, Maharashtra 410210.`}</li>
+                                <li><span className='font-semibold'>Email:</span>{`admin@krafitechahospitality.com`}</li>
+                                <li><span className='font-semibold'>Phone:</span>{` +91 7021719016`}</li>
+                                <li><span className='font-semibold'>Address:</span>{`Krafitecha Hospitality, Office No.1006 Juhi Niharika Mirage, 274, Kopra Rd, Sector 10, Kharghar, Navi Mumbai, Maharashtra 410210.`}</li>
                             </ul>
                         </div>
                     </div>

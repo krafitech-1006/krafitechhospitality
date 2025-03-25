@@ -90,7 +90,7 @@ const Blog7 = () => {
 
       
 
-<p className='font-semibold tracking-wide mt-8'>Krafitech Solutions have a very creative social media team working for hotels, if you are looking to subscribe to social page programmer – a social media marketing tool for hotels, please write to contact US.</p>
+<p className='font-semibold tracking-wide mt-8'>Krafitech Hospitality have a very creative social media team working for hotels, if you are looking to subscribe to social page programmer – a social media marketing tool for hotels, please write to contact US.</p>
 
 
 
@@ -174,7 +174,7 @@ const Blog7 = () => {
 
       
 
-<p className='font-semibold tracking-wide mt-8'>Krafitech Solutions have a very creative social media team working for hotels, if you are looking to subscribe to social page programmer – a social media marketing tool for hotels, please write to contact US.</p>
+<p className='font-semibold tracking-wide mt-8'>Krafitech Hospitality have a very creative social media team working for hotels, if you are looking to subscribe to social page programmer – a social media marketing tool for hotels, please write to contact US.</p>
 
 
 

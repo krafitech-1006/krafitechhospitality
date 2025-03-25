@@ -5,7 +5,7 @@ import { MoveUpRight } from 'lucide-react'
 const RefundPolicy = () => {
 
     return (
-        <div className='mt-16'>
+        <div className='py-32'>
             <div className=''>
                 <div className="text-2xl text-[#800000] text-center font-extralight mt-4 md:text-2xl lg:text-4xl lg:font-bold">
                     {'Refund Policy'}

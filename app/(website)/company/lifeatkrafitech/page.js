@@ -21,7 +21,7 @@ const page = () => {
       id: 3,
       image: IMAGES.l3, // Replace with the actual image path
       title: 'DIVERSITY AND CULTURE',
-      desc: `We are on a journey of continued learning and growth, and diversity is what makes us stronger and more innovative. At Krafitech Solution, you can expect to`
+      desc: `We are on a journey of continued learning and growth, and diversity is what makes us stronger and more innovative. At Krafitech Hospitality, you can expect to`
     },
   ];
 

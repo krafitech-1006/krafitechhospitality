@@ -28,7 +28,7 @@ export default function Footer() {
     { href: "https://facebook.com", icon: "Facebook" },
     { href: "https://linkedin.com", icon: "Linkedin" },
     { href: "https://youtube.com", icon: "Youtube" },
-    { href: "https://instagram.com", icon: "Instagram" },
+    { href: "https://www.instagram.com/prosperahospitality/", icon: "Instagram" },
   ];
 
   const pathname = usePathname();

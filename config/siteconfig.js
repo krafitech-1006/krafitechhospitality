@@ -212,35 +212,31 @@ export const siteConfig = {
     },
     {
       label: "About Us",
-      href: "/aboutus",
+      href: "/company/aboutus",
     },
     {
-      label: "Our Services",
-      href: "/services",
+      label: "Services",
+      href: "/services/revenue-management",
     },
     {
-      label: "Pricing",
-      href: "/prices",
+      label: "Our Products",
+      href: "/ourproducts/cloudbasedsystem",
     },
     {
       label: "Testimonials",
-      href: "/testimonials",
-    },
-    {
-      label: "Vacation Rental",
-      href: "/vacation-rental",
+      href: "/successstory",
     },
     {
       label: "Contact Us",
-      href: "/contact-us",
+      href: "/support/contact",
     },
     {
       label: "Careers",
-      href: "/career",
+      href: "/company/lifeatkrafitech",
     },
     {
       label: "Blog",
-      href: "/blogs",
+      href: "/resources/blog",
     },
   ],
 

@@ -21,7 +21,7 @@ const page = () => {
       id: 3,
       image: IMAGES.knowledge, // Replace with the actual image path
       title: 'Knowledge centre providing instant support resources',
-      desc: `We are on a journey of continued learning and growth, and diversity is what makes us stronger and more innovative. At Krafitech Solution, you can expect to`
+      desc: `We are on a journey of continued learning and growth, and diversity is what makes us stronger and more innovative. At Krafitech Hospitality, you can expect to`
     },
   ];
 

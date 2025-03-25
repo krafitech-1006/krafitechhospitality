@@ -25,7 +25,7 @@ const Blog8 = () => {
     <div>
       <div className='hidden lg:block relative w-full bg-neutral-200 py-32 lg:py-56 '>
         <div className='w-[90%] lg:w-[80%] m-auto '>
-          <div className='font-bold tracking-widest text-lg uppercase'>WHAT IT TAKES TO BE A HOTEL REVENUE MANAGEMENT AT KRAFITECH SOLUTIONS</div>
+          <div className='font-bold tracking-widest text-lg uppercase'>WHAT IT TAKES TO BE A HOTEL REVENUE MANAGEMENT AT Krafitech Hospitality</div>
           <div className='flex flex-row justify-start items-start mt-8'>
             <div className='flex flex-col gap-8 w-[50%]'>
               <div className='bg-[#14acac] rounded-xl p-2 mt-0 text-md '>
@@ -161,7 +161,7 @@ const Blog8 = () => {
 
       <div className='relative lg:hidden w-full bg-neutral-200 py-32 lg:py-56'>
       <div className='w-[90%] lg:w-[80%] m-auto '>
-          <div className='font-bold tracking-widest text-lg uppercase'>WHAT IT TAKES TO BE A HOTEL REVENUE MANAGEMENT AT KRAFITECH SOLUTIONS</div>
+          <div className='font-bold tracking-widest text-lg uppercase'>WHAT IT TAKES TO BE A HOTEL REVENUE MANAGEMENT AT Krafitech Hospitality</div>
           <div className='flex flex-col justify-start items-start mt-8'>
             <div className='flex flex-col gap-8 w-[100%]'>
               <div className='bg-[#14acac] rounded-xl p-2 mt-0 text-md '>
