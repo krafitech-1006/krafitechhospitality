@@ -97,7 +97,7 @@ const NavBar = () => {
   return (
     <>
 
-      <div className={`hidden lg:block fixed top-0 left-0 w-full h-16 z-50 ${navbarBg} ${
+      <div className={`hidden lg:block fixed top-0 left-0 w-full h-16 z-40 ${navbarBg} ${
         navbarVisible ? "translate-y-0 bg-black" : "-translate-y-full"
       }`}>
         <div className="py-4 w-[90%] lg:w-[95%] mx-auto flex items-center gap-56">
