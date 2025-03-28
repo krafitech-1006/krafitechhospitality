@@ -451,7 +451,7 @@ const links = [
     sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
   { name: "RESOURCES", url: "/resources/blog", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
-  { name: "SUPPORT", url: "24/7 Tech support", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
+  { name: "SUPPORT", url: "/support/contact", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
 
 const links1 = [
@@ -529,7 +529,7 @@ const links1 = [
     sublinks: [{ name: "About Us", url: "/company/aboutus" }, { name: "Life at krafitech", url: "/company/lifeatkrafitech" }],
   },
   { name: "RESOURCES", url: "/resources/blog", sublinks: [{ name: "Blogs", url: "/resources/blog" }] },
-  { name: "SUPPORT", url: "24/7 Tech support", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
+  { name: "SUPPORT", url: "/support/contact", sublinks: [{ name: "24/7 Tech support", url: "/support/tech-support" }, { name: "Contact", url: "/support/contact" }], },
 ];
 
 
