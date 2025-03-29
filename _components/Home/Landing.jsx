@@ -14,7 +14,7 @@ const Landing = (props) => {
   const router = useRouter();
 
   return (
-    <div className="w-full h-[45rem] md:h-full flex justify-center items-center">
+    <div className="w-full h-[45rem] md:h-full flex justify-center items-center" data-lenis-prevent>
       {/* Background Image */}
       <video
         autoPlay
