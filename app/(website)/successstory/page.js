@@ -62,23 +62,6 @@ const page = () => {
                                                                             `
         },
         {
-            id: 3,
-            image: IMAGES.s3, // Replace with the actual image path
-            title: 'Mountain View',
-            problem: 'Very low direct bookings as most bookings was coming from OTAs.',
-            desc: `
-                                                                                The direct booking numbers witnessed a
-                                                                                surge of over 30% when the function was
-                                                                                delegated to Krafitech Hospitality team.
-                                                                                Our team also recorded the call details
-                                                                                in a software and made regular
-                                                                                follow-ups, resulting in more closures.
-                                                                                In the end, we helped the client save
-                                                                                commission, which otherwise had to be
-                                                                                paid to OTAs, by leaps and bounds.
-                                                                            `
-        },
-        {
             id: 4,
             image: IMAGES.s4, // Replace with the actual image path
             title: 'JC Guest House',
@@ -105,6 +88,13 @@ const page = () => {
             title: 'Shreesha Resort',
             problem: 'No social media presence and no OTA presence',
             desc: `Shresha Resort had little to no social media presence and zero OTA listings until we stepped in to shoulder them with creating a brand awareness campaign. The social media team at Krafitech Hospitality started to work on their social media profile and OTA contracting aggressively. Our strategy included both paid as well as organic social media campaigns, and consequently getting them listed on all the popular OTAs. Our collaboration resulted in a 45% boost in our client’s revenue to 70% from mere 25%: all of this in a span of just 2 months.`
+        },
+        {
+            id: 8,
+            image: IMAGES.s8, // Replace with the actual image path
+            title: 'Gopal Villa',
+            problem: 'Overbooking due to manual inventory management',
+            desc: `Krafitech Hospitality implements an automated channel manager that synchronizes inventory across all OTAs sold hotel and reduces the risk of overbooking.`
         },
     ];
 

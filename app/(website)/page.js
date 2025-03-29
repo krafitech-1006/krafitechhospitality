@@ -9,6 +9,7 @@ import InstagramFeed from '@/_components/Home/InstagramFeed'
 import ContactForm from '@/_components/Home/ContactForm'
 import Testimonial from '@/_components/Testimonial'
 import Mop from '@/_components/Home/Mop'
+import OurClients from '@/_components/Home/OurClients'
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
       <OurOffers />
       <Blogs />
       <InstagramFeed />
+      {/* <OurClients /> */}
       <Mop />
       {/* <Testimonial /> */}
       {/* <ContactForm /> */}

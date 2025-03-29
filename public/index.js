@@ -135,6 +135,7 @@ const IMAGES = {
     s5: '/img/s5.jpg',
     s6: '/img/s6.jpeg',
     s7: '/img/s7.jpeg',
+    s8: '/img/s8.jpeg',
     blogimg: '/img/blogimg.webp',
     q1: '/img/q1.png',
     q2: '/img/q2.png',

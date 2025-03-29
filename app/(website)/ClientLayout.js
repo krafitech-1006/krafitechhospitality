@@ -5,10 +5,22 @@ import Footer from "@/_components/Footer/Footer";
 import React, { useState } from "react";
 import { Providers } from "@/app/providers";
 import { motion } from "framer-motion";
+import Lenis from 'lenis'
 
 export default function ClientLayout({ children }) {
   const [loading, setLoading] = useState(true);
   const [loading1, setLoading1] = useState(true);
+
+  useEffect( () => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
 
   return (
     <Providers>
