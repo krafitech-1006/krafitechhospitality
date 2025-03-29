@@ -20,7 +20,7 @@ const Landing = (props) => {
         autoPlay
         loop
         muted
-        preload="auto"
+        preload="metadata"
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
