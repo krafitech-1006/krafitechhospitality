@@ -14,13 +14,13 @@ const Landing = (props) => {
   const router = useRouter();
 
   return (
-    <div className="w-full h-[45rem] md:h-full flex justify-center items-center" data-lenis-prevent>
+    <div className="w-full h-[45rem] md:h-full flex justify-center items-center">
       {/* Background Image */}
       <video
         autoPlay
         loop
         muted
-        preload="metadata"
+        preload="auto"
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >

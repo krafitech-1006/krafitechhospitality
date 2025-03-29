@@ -11,16 +11,16 @@ export default function ClientLayout({ children }) {
   const [loading, setLoading] = useState(true);
   const [loading1, setLoading1] = useState(true);
 
-  useEffect( () => {
-    const lenis = new Lenis()
+  // useEffect( () => {
+  //   const lenis = new Lenis()
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+  //   function raf(time) {
+  //     lenis.raf(time)
+  //     requestAnimationFrame(raf)
+  //   }
 
-    requestAnimationFrame(raf)
-  }, [])
+  //   requestAnimationFrame(raf)
+  // }, [])
 
   return (
     <Providers>
