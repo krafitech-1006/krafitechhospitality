@@ -2,7 +2,7 @@
 import "@/app/styles/globals.css";
 import NavBar from "@/_components/NavBar/NavBar";
 import Footer from "@/_components/Footer/Footer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Providers } from "@/app/providers";
 import { motion } from "framer-motion";
 import Lenis from 'lenis'
